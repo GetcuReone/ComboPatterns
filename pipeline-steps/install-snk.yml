@@ -7,43 +7,47 @@ steps:
 
 - script: |
     echo Install file $(snk_file.secureFilePath)
+    cp '$(snk_file.secureFilePath)' '(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns'
+    cp '$(snk_file.secureFilePath)' '(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns.AFAP'
+    cp '$(snk_file.secureFilePath)' '(Build.Repository.LocalPath)/ComboPatterns/Tests/ComboPatterns.AFAP.UnitTests'
+    cp '$(snk_file.secureFilePath)' '(Build.Repository.LocalPath)/ComboPatterns/NugetProject'
 
-- task: CopyFiles@2
-  displayName: 'Copy snk file to ComboPatterns project'
-  inputs:
-    SourceFolder: '$(Agent.TempDirectory)'
-    Contents: '*.snk'
-    TargetFolder: '$(commboPatternsFolder)'
+# - task: CopyFiles@2
+#   displayName: 'Copy snk file to ComboPatterns project'
+#   inputs:
+#     SourceFolder: '$(Agent.TempDirectory)'
+#     Contents: '*.snk'
+#     TargetFolder: '$(commboPatternsFolder)'
 
-- script: |
-    echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(commboPatternsFolder)'
+# - script: |
+#     echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(commboPatternsFolder)'
 
-- task: CopyFiles@2
-  displayName: 'Copy snk file to ComboPatterns.AFAP project'
-  inputs:
-    SourceFolder: '$(Agent.TempDirectory)'
-    Contents: '*.snk'
-    TargetFolder: '$(commboPatternsAFAPFolder)'
+# - task: CopyFiles@2
+#   displayName: 'Copy snk file to ComboPatterns.AFAP project'
+#   inputs:
+#     SourceFolder: '$(Agent.TempDirectory)'
+#     Contents: '*.snk'
+#     TargetFolder: '$(commboPatternsAFAPFolder)'
 
-- script: |
-    echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(commboPatternsAFAPFolder)'
+# - script: |
+#     echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(commboPatternsAFAPFolder)'
 
-- task: CopyFiles@2
-  displayName: 'Copy snk file to ComboPatterns.AFAP.UnitTests project'
-  inputs:
-    SourceFolder: '$(Agent.TempDirectory)'
-    Contents: '*.snk'
-    TargetFolder: '$(commboPatternsAFAPUnitTestsFolder)'
+# - task: CopyFiles@2
+#   displayName: 'Copy snk file to ComboPatterns.AFAP.UnitTests project'
+#   inputs:
+#     SourceFolder: '$(Agent.TempDirectory)'
+#     Contents: '*.snk'
+#     TargetFolder: '$(commboPatternsAFAPUnitTestsFolder)'
 
-- script: |
-    echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(commboPatternsAFAPUnitTestsFolder)'
+# - script: |
+#     echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(commboPatternsAFAPUnitTestsFolder)'
 
-- task: CopyFiles@2
-  displayName: 'Copy snk file to NugetProject project'
-  inputs:
-    SourceFolder: '$(Agent.TempDirectory)'
-    Contents: '*.snk'
-    TargetFolder: '$(nugetProjectFolder)'
+# - task: CopyFiles@2
+#   displayName: 'Copy snk file to NugetProject project'
+#   inputs:
+#     SourceFolder: '$(Agent.TempDirectory)'
+#     Contents: '*.snk'
+#     TargetFolder: '$(nugetProjectFolder)'
 
-- script: |
-    echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(nugetProjectFolder)'
+# - script: |
+#     echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(nugetProjectFolder)'
