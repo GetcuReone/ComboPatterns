@@ -37,3 +37,13 @@ steps:
 
 - script: |
     echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(commboPatternsAFAPUnitTestsFolder)'
+
+- task: CopyFiles@2
+  displayName: 'Copy snk file to NugetProject project'
+  inputs:
+    SourceFolder: '$(Agent.TempDirectory)'
+    Contents: '*.snk'
+    TargetFolder: '$(nugetProjectFolder)'
+
+- script: |
+    echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(nugetProjectFolder)'

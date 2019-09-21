@@ -16,6 +16,7 @@ variables:
   commboPatternsFolder: '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns'
   commboPatternsAFAPFolder: '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns.AFAP'
   commboPatternsAFAPUnitTestsFolder: '$(Build.Repository.LocalPath)/ComboPatterns/Tests/ComboPatterns.AFAP.UnitTests'
+  nugetProjectFolder: '$(Build.Repository.LocalPath)/ComboPatterns/NugetProject'
 
 steps:
 - task: NuGetToolInstaller@1
