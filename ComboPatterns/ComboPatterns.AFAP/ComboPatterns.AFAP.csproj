@@ -12,4 +12,8 @@
     <DocumentationFile>ComboPatterns.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ComboPatterns\ComboPatterns.csproj" />
+  </ItemGroup>
+
 </Project>
