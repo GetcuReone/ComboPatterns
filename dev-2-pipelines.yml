@@ -1,0 +1,48 @@
+# .NET Desktop
+# Build and run tests for .NET Desktop or Windows classic desktop solutions.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
+
+trigger:
+- dev-2
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  displayName: "NuGet restore"
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: VSBuild@1
+  displayName: "VS build"
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSTest@2
+  displayName: 'VSTest run'
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    testRunTitle: 'VS run tests'
+
+- task: NuGetCommand@2
+  displayName: "NuGet pack"
+  inputs:
+    command: 'pack'
+    packagesToPack: '**/.nuspec'
+    versioningScheme: 'off'
