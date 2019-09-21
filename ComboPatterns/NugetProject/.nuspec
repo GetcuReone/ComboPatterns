@@ -4,7 +4,7 @@
     <!-- The identifier that must be unique within the hosting gallery -->
     <id>ComboPatterns</id>
     <!-- The package version number that is used when resolving dependencies -->
-    <version>2.2.3</version>
+    <version>2.2.3.1</version>
     <!-- Authors contain text that appears directly on the gallery -->
     <authors>Getcu Reone</authors>
     <!-- 
@@ -13,7 +13,7 @@
         -->
     <owners>GetcuReone</owners>
     <!-- Project URL provides a link for the gallery -->
-    <!--<projectUrl>https://github.com/GetcuReone/ComboPatterns.git</projectUrl>-->
+    <projectUrl>https://github.com/GetcuReone/ComboPatterns.git</projectUrl>
 
     <!-- License information is displayed on the gallery -->
     <license type="expression">Apache-2.0</license>
@@ -24,13 +24,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Any details about this particular release -->
     <releaseNotes>
-      - sign the assemlies
+      - posted the code on the GitHub
     </releaseNotes>
     <!-- 
             The description can be used in package manager UI. Note that the
             nuget.org gallery uses information you add in the portal. 
         -->
-    <!--<repository type="git" url="https://github.com/GetcuReone/ComboPatterns.git" branch="master"/>-->
+    <repository type="git" url="https://github.com/GetcuReone/ComboPatterns.git" branch="master"/>
     <description>My implementation of a combination of patterns</description>
 
     <!-- Copyright information -->
