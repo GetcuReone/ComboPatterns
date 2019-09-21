@@ -7,10 +7,10 @@ steps:
 
 - script: |
     echo Install file $(snk_file.secureFilePath)
-    cp '$(snk_file.secureFilePath)' '(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns'
-    cp '$(snk_file.secureFilePath)' '(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns.AFAP'
-    cp '$(snk_file.secureFilePath)' '(Build.Repository.LocalPath)/ComboPatterns/Tests/ComboPatterns.AFAP.UnitTests'
-    cp '$(snk_file.secureFilePath)' '(Build.Repository.LocalPath)/ComboPatterns/NugetProject'
+    cp '$(snk_file.secureFilePath)' '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns'
+    cp '$(snk_file.secureFilePath)' '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns.AFAP'
+    cp '$(snk_file.secureFilePath)' '$(Build.Repository.LocalPath)/ComboPatterns/Tests/ComboPatterns.AFAP.UnitTests'
+    cp '$(snk_file.secureFilePath)' '$(Build.Repository.LocalPath)/ComboPatterns/NugetProject'
 
 # - task: CopyFiles@2
 #   displayName: 'Copy snk file to ComboPatterns project'
