@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ComboPatterns</name>
+    </assembly>
+    <members>
+        <member name="T:ComboPatterns.Interfaces.IAbstractFactory">
+            <summary>
+            Abstract factory interface
+            </summary>
+        </member>
+        <member name="M:ComboPatterns.Interfaces.IAbstractFactory.CreateObject``2(System.Func{``0,``1},``0)">
+            <summary>
+            Object Creation Method
+            </summary>
+            <typeparam name="TObj">type of object to create</typeparam>
+            <typeparam name="TParameters">type of parameters for creating an object</typeparam>
+            <param name="factoryFunc">function to create objects</param>
+            <param name="parameters">options for creating an object</param>
+            <returns>object</returns>
+        </member>
+        <member name="T:ComboPatterns.Interfaces.IAdapter">
+            <summary>
+            Adapter interface
+            </summary>
+        </member>
+        <member name="M:ComboPatterns.Interfaces.IAdapter.GetAdapter``1">
+            <summary>
+            Adapter creation method
+            </summary>
+            <typeparam name="TAdapter">type of adapter created</typeparam>
+            <returns>adapter <typeparamref name="TAdapter"/></returns>
+        </member>
+        <member name="T:ComboPatterns.Interfaces.IFacade">
+            <summary>
+            Facade interface
+            </summary>
+        </member>
+        <member name="M:ComboPatterns.Interfaces.IFacade.GetFacade``1">
+            <summary>
+            Facade creation method
+            </summary>
+            <typeparam name="TFacade">type of facade created</typeparam>
+            <returns>facade <typeparamref name="TFacade"/></returns>
+        </member>
+        <member name="T:ComboPatterns.Interfaces.IFactoryProxyMethod`1">
+            <summary>
+            Intarface factory proxy creation proxy
+            </summary>
+            <typeparam name="TProxy"></typeparam>
+        </member>
+        <member name="M:ComboPatterns.Interfaces.IFactoryProxyMethod`1.CreateProxy">
+            <summary>
+            Proxy creation method
+            </summary>
+            <returns>proxy</returns>
+        </member>
+        <member name="T:ComboPatterns.Interfaces.IFactoryProxyMethod`2">
+            <summary>
+            Intarface factory proxy creation proxy
+            </summary>
+            <typeparam name="TProxy"></typeparam>
+            <typeparam name="TProxyParameter"></typeparam>
+        </member>
+        <member name="M:ComboPatterns.Interfaces.IFactoryProxyMethod`2.CreateProxy(`1)">
+            <summary>
+            Proxy creation method
+            </summary>
+            <param name="parameter">parameter</param>
+            <returns>proxy</returns>
+        </member>
+    </members>
+</doc>
