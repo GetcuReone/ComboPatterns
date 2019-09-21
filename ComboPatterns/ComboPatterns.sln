@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns", "ComboPatterns\ComboPatterns.csproj", "{07EE77EA-196C-4E97-9C4B-559FDE19E30B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns", "ComboPatterns\ComboPatterns.csproj", "{07EE77EA-196C-4E97-9C4B-559FDE19E30B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetProject", "NugetProject\NugetProject.csproj", "{3628F635-D4B0-4586-9F0E-E457FCB825B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NugetProject", "NugetProject\NugetProject.csproj", "{3628F635-D4B0-4586-9F0E-E457FCB825B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.AFAP", "ComboPatterns.AFAP\ComboPatterns.AFAP.csproj", "{6646425D-6074-449E-85E9-F7642C7328B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns.AFAP", "ComboPatterns.AFAP\ComboPatterns.AFAP.csproj", "{6646425D-6074-449E-85E9-F7642C7328B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AEBA0531-633E-4117-AD11-B3B52E841D80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.AFAP.UnitTests", "Tests\ComboPatterns.AFAP.UnitTests\ComboPatterns.AFAP.UnitTests.csproj", "{02F8ADF6-164E-4C9B-8457-655864E2A018}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +31,16 @@ Global
 		{6646425D-6074-449E-85E9-F7642C7328B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6646425D-6074-449E-85E9-F7642C7328B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6646425D-6074-449E-85E9-F7642C7328B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02F8ADF6-164E-4C9B-8457-655864E2A018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02F8ADF6-164E-4C9B-8457-655864E2A018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02F8ADF6-164E-4C9B-8457-655864E2A018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02F8ADF6-164E-4C9B-8457-655864E2A018}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02F8ADF6-164E-4C9B-8457-655864E2A018} = {AEBA0531-633E-4117-AD11-B3B52E841D80}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27B688AF-8942-4314-AEA0-206D9F01CB01}
