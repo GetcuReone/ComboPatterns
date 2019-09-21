@@ -13,8 +13,6 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  commboPatternsFolder: '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns'
-  commboPatternsAFAPFolder: '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns.AFAP'
 
 steps:
 - task: NuGetToolInstaller@1
