@@ -39,10 +39,3 @@ steps:
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
     testRunTitle: 'VS run tests'
-
-- task: NuGetCommand@2
-  displayName: "NuGet pack"
-  inputs:
-    command: 'pack'
-    packagesToPack: '**/.nuspec'
-    versioningScheme: 'off'
