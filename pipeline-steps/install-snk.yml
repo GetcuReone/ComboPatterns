@@ -1,0 +1,44 @@
+variables:
+  commboPatternsFolder: '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns'
+  commboPatternsAFAPFolder: '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns.AFAP'
+  commboPatternsAFAPUnitTestsFolder: '$(Build.Repository.LocalPath)/ComboPatterns/Tests/ComboPatterns.AFAP.UnitTests'
+
+steps:
+- task: DownloadSecureFile@1
+  displayName: 'Get secure file'
+  name: 'snk_file'
+  inputs:
+    secureFile: 'GetcuReone.snk'
+
+- script: |
+    echo Install file $(snk_file.secureFilePath)
+
+- task: CopyFiles@2
+  displayName: 'Copy snk file to ComboPatterns project'
+  inputs:
+    SourceFolder: '$(Agent.TempDirectory)'
+    Contents: '*.snk'
+    TargetFolder: '$(commboPatternsFolder)'
+
+- script: |
+    echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(commboPatternsFolder)'
+
+- task: CopyFiles@2
+  displayName: 'Copy snk file to ComboPatterns.AFAP project'
+  inputs:
+    SourceFolder: '$(Agent.TempDirectory)'
+    Contents: '*.snk'
+    TargetFolder: '$(commboPatternsAFAPFolder)'
+
+- script: |
+    echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(commboPatternsAFAPFolder)'
+
+- task: CopyFiles@2
+  displayName: 'Copy snk file to ComboPatterns.AFAP.UnitTests project'
+  inputs:
+    SourceFolder: '$(Agent.TempDirectory)'
+    Contents: '*.snk'
+    TargetFolder: '$(commboPatternsAFAPUnitTestsFolder)'
+
+- script: |
+    echo copy files snk. source folder '$(Agent.TempDirectory)', dest folder '$(commboPatternsAFAPUnitTestsFolder)'
