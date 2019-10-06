@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ComboPatterns.AFAP\ComboPatterns.AFAP.csproj" />
     <ProjectReference Include="..\ComboPatterns\ComboPatterns.csproj" />
+    <ProjectReference Include="..\ComboPatterns_AFAP\ComboPatterns.AFAP\ComboPatterns.AFAP.csproj" />
   </ItemGroup>
 
 </Project>

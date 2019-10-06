@@ -8,15 +8,15 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>ComboPatterns.xml</DocumentationFile>
+    <DocumentationFile>ComboPatterns.AFAP.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>ComboPatterns.xml</DocumentationFile>
+    <DocumentationFile>ComboPatterns.AFAP.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ComboPatterns\ComboPatterns.csproj" />
+    <ProjectReference Include="..\..\ComboPatterns\ComboPatterns.csproj" />
   </ItemGroup>
 
 </Project>

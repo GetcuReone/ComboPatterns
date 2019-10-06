@@ -11,11 +11,11 @@ steps:
     cp '$(snk_file.secureFilePath)' '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns'
     echo copied '$(snk_file.secureFilePath)' to '$(Build.Repository.LocalPath)\ComboPatterns\ComboPatterns'
 
-    cp '$(snk_file.secureFilePath)' '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns.AFAP'
-    echo copied '$(snk_file.secureFilePath)' to '$(Build.Repository.LocalPath)\ComboPatterns\ComboPatterns.AFAP'
+    cp '$(snk_file.secureFilePath)' '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns_AFAP/ComboPatterns.AFAP'
+    echo copied '$(snk_file.secureFilePath)' to '$(Build.Repository.LocalPath)\ComboPatterns\ComboPatterns_AFAP\ComboPatterns.AFAP'
 
-    cp '$(snk_file.secureFilePath)' '$(Build.Repository.LocalPath)/ComboPatterns/Tests/ComboPatterns.AFAP.UnitTests'
-    echo copied '$(snk_file.secureFilePath)' to '$(Build.Repository.LocalPath)\ComboPatterns\Tests\ComboPatterns.AFAP.UnitTests'
+    cp '$(snk_file.secureFilePath)' '$(Build.Repository.LocalPath)/ComboPatterns/ComboPatterns_AFAP/ComboPatterns.AFAP.UnitTests'
+    echo copied '$(snk_file.secureFilePath)' to '$(Build.Repository.LocalPath)\ComboPatterns\ComboPatterns_AFAP\ComboPatterns.AFAP.UnitTests'
 
     cp '$(snk_file.secureFilePath)' '$(Build.Repository.LocalPath)/ComboPatterns/NugetProject'
     echo copied '$(snk_file.secureFilePath)' to '$(Build.Repository.LocalPath)\ComboPatterns\NugetProject'
