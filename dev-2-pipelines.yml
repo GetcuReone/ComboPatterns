@@ -33,7 +33,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: VSTest@2
-  displayName: 'VSTest run'
+  displayName: 'VS run tests'
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |

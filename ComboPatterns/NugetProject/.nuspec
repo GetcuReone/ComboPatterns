@@ -13,7 +13,7 @@
         -->
     <owners>GetcuReone</owners>
     <!-- Project URL provides a link for the gallery -->
-    <projectUrl>https://github.com/GetcuReone/ComboPatterns.git</projectUrl>
+    <projectUrl>https://github.com/GetcuReone/ComboPatterns/wiki</projectUrl>
 
     <!-- License information is displayed on the gallery -->
     <license type="expression">Apache-2.0</license>
@@ -34,7 +34,7 @@
     <description>My implementation of a combination of patterns</description>
 
     <!-- Copyright information -->
-    <copyright>Copyright ©2019 GetcuReone</copyright>
+    <copyright>Copyright © GetcuReone 2019</copyright>
 
     <!-- Tags appear in the gallery and can be used for tag searches -->
     <tags>abstractfactory factory facade adapter proxy</tags>
