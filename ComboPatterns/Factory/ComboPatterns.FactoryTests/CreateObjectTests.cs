@@ -1,19 +1,12 @@
 using JwtTestAdapter;
-using JwtTestAdapter.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace ComboPatterns.FactoryTests
 {
     [TestClass]
-    public class CreateObjectTests : TestBase
+    public class CreateObjectTests : FactoryTestBase<Env.Factory>
     {
-
-        private GivenBlock<Env.Factory> GivenCreateFactory()
-        {
-            return Given("Create factory", () => new Env.Factory());
-        }
-
         [TestMethod]
         [Timeout(Timeouts.MilliSecond.Hundred)]
         [Description("[factory] create object")]
