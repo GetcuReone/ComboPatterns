@@ -14,7 +14,7 @@
             Object Creation Method
             </summary>
             <typeparam name="TObj">type of object to create</typeparam>
-            <typeparam name="TParameters">type of parameters for creating an object</typeparam>
+            <typeparam name="TParameter">type of parameters for creating an object</typeparam>
             <param name="factoryFunc">function to create objects</param>
             <param name="parameters">options for creating an object</param>
             <returns>object</returns>
@@ -59,7 +59,7 @@
             </summary>
             <typeparam name="TProxy">type proxy</typeparam>
         </member>
-        <member name="M:GetcuReone.ComboPatterns.Interfaces.IProxyCreation`1.GetProxy">
+        <member name="M:GetcuReone.ComboPatterns.Interfaces.IProxyCreation`1.CreateProxy">
             <summary>
             Proxy creation method
             </summary>
@@ -72,7 +72,7 @@
             <typeparam name="TProxy">type proxy</typeparam>
             <typeparam name="TProxyParameter">type proxy parameter</typeparam>
         </member>
-        <member name="M:GetcuReone.ComboPatterns.Interfaces.IProxyCreation`2.GetProxy(`1)">
+        <member name="M:GetcuReone.ComboPatterns.Interfaces.IProxyCreation`2.CreateProxy(`1)">
             <summary>
             Proxy creation method
             </summary>

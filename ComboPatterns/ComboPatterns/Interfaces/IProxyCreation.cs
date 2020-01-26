@@ -10,7 +10,7 @@
         /// Proxy creation method
         /// </summary>
         /// <returns></returns>
-        TProxy GetProxy();
+        TProxy CreateProxy();
     }
 
     /// <summary>
@@ -25,6 +25,6 @@
         /// </summary>
         /// <param name="param"></param>
         /// <returns></returns>
-        TProxy GetProxy(TProxyParameter param);
+        TProxy CreateProxy(TProxyParameter param);
     }
 }

@@ -1,8 +1,11 @@
 using JwtTestAdapter;
+using JwtTestAdapter.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Reflection;
 
 namespace InfrastructureTests
 {
@@ -53,11 +56,52 @@ namespace InfrastructureTests
                     {
                         "lib/netstandard2.0/ComboPatterns.dll",
                         "lib/netstandard2.0/ComboPatterns.xml",
+                        "lib/netstandard2.0/ComboPatterns.Factory.dll",
+                        "lib/netstandard2.0/ComboPatterns.Factory.xml",
                         "LICENSE-2.0.txt"
                     };
 
                     foreach (string file in files)
                         Assert.IsTrue(fileNames.Any(fileFullName => fileFullName == file), $"The archive does not contain a file {file}");
+                });
+        }
+
+        [Timeout(Timeouts.Minute.One)]
+        [TestMethod]
+        [Description("[infrastructure] Check for all attribute Timeout tests")]
+        public void AllHaveTimeoutTestCase()
+        {
+            List<string> assemblyPaths = new List<string>
+            {
+                @"..\..\..\..\..\Factory\ComboPatterns.FactoryTests\bin\" + buildMode + @"\netcoreapp3.0\ComboPatterns.FactoryTests.dll",
+                @"InfrastructureTests.dll",
+            };
+
+            Given("We get all the test builds", () => assemblyPaths.ConvertAll(name => Assembly.LoadFrom(name)))
+                .And("We get all types", assemblies => assemblies.SelectMany(assembly => assembly.GetTypes()).ToList())
+                .And("Get all classes with tests", types => types.Where(type => type.GetCustomAttribute(typeof(TestClassAttribute)) != null).ToList())
+                .When("Return all test methods", classes =>
+                {
+                    List<MemberInfo> result = new List<MemberInfo>();
+
+                    foreach (var cl in classes)
+                    {
+                        foreach (var method in cl.GetMethods().Where(method => method.GetCustomAttribute(typeof(TestMethodAttribute)) != null))
+                        {
+                            result.Add(method);
+                            LoggingHelper.Info($"test method {cl.FullName}.{method.Name}()");
+                        }
+                    }
+
+                    return result;
+                })
+                .Then("Check timeouts", methods =>
+                {
+                    foreach (var method in methods)
+                    {
+                        if (method.GetCustomAttribute(typeof(TimeoutAttribute)) == null)
+                            Assert.Fail($"method {method.DeclaringType.FullName}.{method.Name} does not have an TimeoutAttribute");
+                    }
                 });
         }
     }
