@@ -1,7 +1,4 @@
 ﻿using GetcuReone.ComboPatterns.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GetcuReone.ComboPatterns.Facade
 {
