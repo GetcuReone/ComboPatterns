@@ -58,6 +58,8 @@ namespace InfrastructureTests
                         "lib/netstandard2.0/ComboPatterns.xml",
                         "lib/netstandard2.0/ComboPatterns.Factory.dll",
                         "lib/netstandard2.0/ComboPatterns.Factory.xml",
+                        "lib/netstandard2.0/ComboPatterns.Facade.dll",
+                        "lib/netstandard2.0/ComboPatterns.Facade.xml",
                         "LICENSE-2.0.txt"
                     };
 
@@ -74,6 +76,7 @@ namespace InfrastructureTests
             List<string> assemblyPaths = new List<string>
             {
                 @"..\..\..\..\..\Factory\ComboPatterns.FactoryTests\bin\" + buildMode + @"\netcoreapp3.0\ComboPatterns.FactoryTests.dll",
+                @"..\..\..\..\..\Facade\ComboPatterns.FacadeTests\bin\" + buildMode + @"\netcoreapp3.0\ComboPatterns.FacadeTests.dll",
                 @"InfrastructureTests.dll",
             };
 

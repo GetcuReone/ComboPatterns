@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.Facade", "Fac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.FacadeTests", "Facade\ComboPatterns.FacadeTests\ComboPatterns.FacadeTests.csproj", "{81F264E8-F6D0-482B-B8A3-B3EFD4C286E5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapter", "Adapter", "{F3661EFB-A06D-47AD-9FE7-9B3AD1F96B10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
