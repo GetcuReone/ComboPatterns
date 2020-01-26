@@ -4,12 +4,12 @@
         <name>ComboPatterns</name>
     </assembly>
     <members>
-        <member name="T:ComboPatterns.Interfaces.IAbstractFactory">
+        <member name="T:GetcuReone.ComboPatterns.Interfaces.IAbstractFactory">
             <summary>
             Abstract factory interface
             </summary>
         </member>
-        <member name="M:ComboPatterns.Interfaces.IAbstractFactory.CreateObject``2(System.Func{``0,``1},``0)">
+        <member name="M:GetcuReone.ComboPatterns.Interfaces.IAbstractFactory.CreateObject``2(System.Func{``0,``1},``0)">
             <summary>
             Object Creation Method
             </summary>
@@ -19,55 +19,65 @@
             <param name="parameters">options for creating an object</param>
             <returns>object</returns>
         </member>
-        <member name="T:ComboPatterns.Interfaces.IAdapter">
+        <member name="T:GetcuReone.ComboPatterns.Interfaces.IAdapter">
             <summary>
-            Adapter interface
+            Adapter creation interface
             </summary>
         </member>
-        <member name="M:ComboPatterns.Interfaces.IAdapter.GetAdapter``1">
+        <member name="T:GetcuReone.ComboPatterns.Interfaces.IAdapterCreation">
+            <summary>
+            Adapter creation interface
+            </summary>
+        </member>
+        <member name="M:GetcuReone.ComboPatterns.Interfaces.IAdapterCreation.GetAdapter``1">
             <summary>
             Adapter creation method
             </summary>
             <typeparam name="TAdapter">type of adapter created</typeparam>
             <returns>adapter <typeparamref name="TAdapter"/></returns>
         </member>
-        <member name="T:ComboPatterns.Interfaces.IFacade">
+        <member name="T:GetcuReone.ComboPatterns.Interfaces.IFacade">
             <summary>
             Facade interface
             </summary>
         </member>
-        <member name="M:ComboPatterns.Interfaces.IFacade.GetFacade``1">
+        <member name="T:GetcuReone.ComboPatterns.Interfaces.IFacadeCreation">
+            <summary>
+            Facade creation interface
+            </summary>
+        </member>
+        <member name="M:GetcuReone.ComboPatterns.Interfaces.IFacadeCreation.GetFacade``1">
             <summary>
             Facade creation method
             </summary>
             <typeparam name="TFacade">type of facade created</typeparam>
             <returns>facade <typeparamref name="TFacade"/></returns>
         </member>
-        <member name="T:ComboPatterns.Interfaces.IFactoryProxyMethod`1">
+        <member name="T:GetcuReone.ComboPatterns.Interfaces.IProxyCreation`1">
             <summary>
-            Intarface factory proxy creation proxy
+            Proxy creation interface
             </summary>
-            <typeparam name="TProxy"></typeparam>
+            <typeparam name="TProxy">type proxy</typeparam>
         </member>
-        <member name="M:ComboPatterns.Interfaces.IFactoryProxyMethod`1.CreateProxy">
+        <member name="M:GetcuReone.ComboPatterns.Interfaces.IProxyCreation`1.GetProxy">
             <summary>
             Proxy creation method
             </summary>
-            <returns>proxy</returns>
+            <returns></returns>
         </member>
-        <member name="T:ComboPatterns.Interfaces.IFactoryProxyMethod`2">
+        <member name="T:GetcuReone.ComboPatterns.Interfaces.IProxyCreation`2">
             <summary>
-            Intarface factory proxy creation proxy
+            Proxy creation interface
             </summary>
-            <typeparam name="TProxy"></typeparam>
-            <typeparam name="TProxyParameter"></typeparam>
+            <typeparam name="TProxy">type proxy</typeparam>
+            <typeparam name="TProxyParameter">type proxy parameter</typeparam>
         </member>
-        <member name="M:ComboPatterns.Interfaces.IFactoryProxyMethod`2.CreateProxy(`1)">
+        <member name="M:GetcuReone.ComboPatterns.Interfaces.IProxyCreation`2.GetProxy(`1)">
             <summary>
             Proxy creation method
             </summary>
-            <param name="parameter">parameter</param>
-            <returns>proxy</returns>
+            <param name="param"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

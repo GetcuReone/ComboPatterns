@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ComboPatterns.Interfaces
+namespace GetcuReone.ComboPatterns.Interfaces
 {
     /// <summary>
     /// Abstract factory interface
