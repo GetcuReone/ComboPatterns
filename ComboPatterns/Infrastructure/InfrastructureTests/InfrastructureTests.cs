@@ -60,6 +60,8 @@ namespace InfrastructureTests
                         "lib/netstandard2.0/ComboPatterns.Factory.xml",
                         "lib/netstandard2.0/ComboPatterns.Facade.dll",
                         "lib/netstandard2.0/ComboPatterns.Facade.xml",
+                        "lib/netstandard2.0/ComboPatterns.Adapter.dll",
+                        "lib/netstandard2.0/ComboPatterns.Adapter.xml",
                         "LICENSE-2.0.txt"
                     };
 
@@ -77,6 +79,7 @@ namespace InfrastructureTests
             {
                 @"..\..\..\..\..\Factory\ComboPatterns.FactoryTests\bin\" + buildMode + @"\netcoreapp3.0\ComboPatterns.FactoryTests.dll",
                 @"..\..\..\..\..\Facade\ComboPatterns.FacadeTests\bin\" + buildMode + @"\netcoreapp3.0\ComboPatterns.FacadeTests.dll",
+                @"..\..\..\..\..\Adapter\ComboPatterns.AdapterTests\bin\" + buildMode + @"\netcoreapp3.0\ComboPatterns.AdapterTests.dll",
                 @"InfrastructureTests.dll",
             };
 

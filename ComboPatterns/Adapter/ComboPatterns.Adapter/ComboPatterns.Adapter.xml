@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ComboPatterns.Adapter</name>
+    </assembly>
+    <members>
+        <member name="T:GetcuReone.ComboPatterns.Adapter.AdapterBase">
+            <summary>
+            Base class for adapteres
+            </summary>
+        </member>
+        <member name="P:GetcuReone.ComboPatterns.Adapter.AdapterBase.Factory">
+            <summary>
+            Factory creating the current adapter
+            </summary>
+        </member>
+        <member name="M:GetcuReone.ComboPatterns.Adapter.AdapterBase.GetAdapter``1">
+            <summary>
+            Adapter creation method
+            </summary>
+            <typeparam name="TAdapter">type of adapter created</typeparam>
+            <returns>adapter <typeparamref name="TAdapter"/></returns>
+        </member>
+        <member name="M:GetcuReone.ComboPatterns.Adapter.AdapterBase.Create``1(GetcuReone.ComboPatterns.Interfaces.IAbstractFactory)">
+            <summary>
+            Adapter creation method
+            </summary>
+            <typeparam name="TAdapter"></typeparam>
+            <param name="factory"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

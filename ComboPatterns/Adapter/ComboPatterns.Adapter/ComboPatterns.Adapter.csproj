@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>GetcuReone.ComboPatterns.Adapter</RootNamespace>
+    <DocumentationFile>ComboPatterns.Adapter.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\GetcuReone.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ComboPatterns\ComboPatterns.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ComboPatterns.Adapter.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
