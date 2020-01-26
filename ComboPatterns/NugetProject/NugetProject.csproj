@@ -3,6 +3,20 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+
+    <Authors>GetcuReone</Authors>
+    <PackageId>ComboPatterns</PackageId>
+    <Product>ComboPatterns</Product>
+    <Description>My implementation of a combination of patterns</Description>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/GetcuReone/ComboPatterns.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>abstractfactory factory facade adapter proxy getcureone combopatterns</PackageTags>
+    <PackageReleaseNotes>restructuring</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright © GetcuReone 2019</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageProjectUrl>https://github.com/GetcuReone/ComboPatterns/wiki</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -27,7 +41,7 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="..\..\dev-pipelines.yml"/>
+    <None Include="..\..\dev-pipelines.yml" />
   </ItemGroup>
 
   <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">

@@ -9,11 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NugetProject", "NugetProjec
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ComboPatterns_AFAP", "ComboPatterns_AFAP", "{B7BED930-83A6-4590-9EB2-E630EF766132}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.AFAP", "ComboPatterns_AFAP\ComboPatterns.AFAP\ComboPatterns.AFAP.csproj", "{57E940E4-849B-4AD8-991A-0F662EDDD22E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns.AFAP", "ComboPatterns_AFAP\ComboPatterns.AFAP\ComboPatterns.AFAP.csproj", "{57E940E4-849B-4AD8-991A-0F662EDDD22E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.AFAP.UnitTests", "ComboPatterns_AFAP\ComboPatterns.AFAP.UnitTests\ComboPatterns.AFAP.UnitTests.csproj", "{C1060DCD-F845-4409-898D-86115D13E745}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.AFAP.Example", "ComboPatterns.AFAP.Example\ComboPatterns.AFAP.Example.csproj", "{C5F12B26-051D-49B6-A35E-588C12B6C959}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns.AFAP.Example", "ComboPatterns.AFAP.Example\ComboPatterns.AFAP.Example.csproj", "{C5F12B26-051D-49B6-A35E-588C12B6C959}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A27BCEE4-55F4-45B4-AE16-7A7DFD6334D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfrastructureTests", "Infrastructure\InfrastructureTests\InfrastructureTests.csproj", "{0DC8EE3D-C15C-4E7E-9E16-BACD7215CF14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtTestAdapter", "Infrastructure\JwtTestAdapter\JwtTestAdapter.csproj", "{0D3E3849-B92A-452E-8FAE-C75B15BEDB62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +47,14 @@ Global
 		{C5F12B26-051D-49B6-A35E-588C12B6C959}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5F12B26-051D-49B6-A35E-588C12B6C959}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5F12B26-051D-49B6-A35E-588C12B6C959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC8EE3D-C15C-4E7E-9E16-BACD7215CF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC8EE3D-C15C-4E7E-9E16-BACD7215CF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC8EE3D-C15C-4E7E-9E16-BACD7215CF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC8EE3D-C15C-4E7E-9E16-BACD7215CF14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3E3849-B92A-452E-8FAE-C75B15BEDB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3E3849-B92A-452E-8FAE-C75B15BEDB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3E3849-B92A-452E-8FAE-C75B15BEDB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3E3849-B92A-452E-8FAE-C75B15BEDB62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +63,8 @@ Global
 		{57E940E4-849B-4AD8-991A-0F662EDDD22E} = {B7BED930-83A6-4590-9EB2-E630EF766132}
 		{C1060DCD-F845-4409-898D-86115D13E745} = {B7BED930-83A6-4590-9EB2-E630EF766132}
 		{C5F12B26-051D-49B6-A35E-588C12B6C959} = {B7BED930-83A6-4590-9EB2-E630EF766132}
+		{0DC8EE3D-C15C-4E7E-9E16-BACD7215CF14} = {A27BCEE4-55F4-45B4-AE16-7A7DFD6334D9}
+		{0D3E3849-B92A-452E-8FAE-C75B15BEDB62} = {A27BCEE4-55F4-45B4-AE16-7A7DFD6334D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27B688AF-8942-4314-AEA0-206D9F01CB01}
