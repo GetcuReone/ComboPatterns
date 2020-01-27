@@ -1,5 +1,4 @@
 using ComboPatterns.AdapterTests.Env;
-using ComboPatterns.FactoryTests;
 using GetcuReone.ComboPatterns.Adapter;
 using JwtTestAdapter;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -25,7 +24,7 @@ namespace ComboPatterns.AdapterTests
 
         [TestMethod]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[facade] bind factory")]
+        [Description("[adapter] bind factory")]
         public void BindFactoryTestCase()
         {
             GivenCreateFactory()
@@ -38,8 +37,8 @@ namespace ComboPatterns.AdapterTests
 
         [TestMethod]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[facade] get adapter")]
-        public void GetFacadeTestCase()
+        [Description("[adapter] get adapter")]
+        public void GetAdapterTestCase()
         {
             Adapter adapter1 = null;
             Adapter adapter2 = null;

@@ -2,8 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-
     <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\GetcuReone.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Factory\ComboPatterns.FactoryTests\ComboPatterns.FactoryTests.csproj" />
     <ProjectReference Include="..\..\Factory\ComboPatterns.Factory\ComboPatterns.Factory.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\JwtTestAdapter\JwtTestAdapter.csproj" />
     <ProjectReference Include="..\ComboPatterns.Facade\ComboPatterns.Facade.csproj" />
   </ItemGroup>
 
