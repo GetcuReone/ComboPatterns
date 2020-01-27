@@ -54,6 +54,7 @@
       <PackagePath></PackagePath>
     </None>
     <None Include="..\..\dev-pipelines.yml" />
+    <None Include="..\..\master-pipelines.yml" />
   </ItemGroup>
 
   <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
