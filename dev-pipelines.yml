@@ -13,13 +13,4 @@ variables:
 steps:
 - template: pipeline-steps/step_restore_build_pack.yml
 
-- task: VSTest@2
-  displayName: 'VS run tests'
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*Tests*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    testRunTitle: 'VS run tests'
+- template: pipeline-steps/step_run_all_tests.yml
