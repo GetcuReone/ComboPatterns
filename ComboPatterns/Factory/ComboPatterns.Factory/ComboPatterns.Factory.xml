@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ComboPatterns.Factory</name>
+    </assembly>
+    <members>
+        <member name="T:GetcuReone.ComboPatterns.Factory.FactoryBase">
+            <summary>
+            abstract object creation factory
+            </summary>
+        </member>
+        <member name="M:GetcuReone.ComboPatterns.Factory.FactoryBase.CreateObject``2(System.Func{``0,``1},``0)">
+            <summary>
+            Object Creation Method
+            </summary>
+            <typeparam name="TObj">type of object to create</typeparam>
+            <typeparam name="TParameter">type of parameters for creating an object</typeparam>
+            <param name="factoryFunc">function to create objects</param>
+            <param name="parameter">options for creating an object</param>
+            <exception cref="T:System.ArgumentNullException">if <paramref name="factoryFunc"/> is null</exception>
+            <returns>object</returns>
+        </member>
+    </members>
+</doc>

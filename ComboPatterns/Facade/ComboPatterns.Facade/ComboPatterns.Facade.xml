@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ComboPatterns.Facade</name>
+    </assembly>
+    <members>
+        <member name="T:GetcuReone.ComboPatterns.Facade.FacadeBase">
+            <summary>
+            Base class for facades
+            </summary>
+        </member>
+        <member name="P:GetcuReone.ComboPatterns.Facade.FacadeBase.Factory">
+            <summary>
+            Factory creating the current facade
+            </summary>
+        </member>
+        <member name="M:GetcuReone.ComboPatterns.Facade.FacadeBase.GetFacade``1">
+            <summary>
+            Facade creation method
+            </summary>
+            <typeparam name="TFacade">type of facade created</typeparam>
+            <returns>facade <typeparamref name="TFacade"/></returns>
+        </member>
+        <member name="M:GetcuReone.ComboPatterns.Facade.FacadeBase.Create``1(GetcuReone.ComboPatterns.Interfaces.IAbstractFactory)">
+            <summary>
+            Facade creation method
+            </summary>
+            <typeparam name="TFacade"></typeparam>
+            <param name="factory"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

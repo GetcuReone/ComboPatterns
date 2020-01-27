@@ -2,19 +2,50 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+
+    <Authors>GetcuReone</Authors>
+    <PackageId>ComboPatterns</PackageId>
+    <Product>ComboPatterns</Product>
+    <Description>My implementation of a combination of patterns</Description>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/GetcuReone/ComboPatterns.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>abstractfactory factory facade adapter proxy getcureone combopatterns</PackageTags>
+    <PackageReleaseNotes>restructuring</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright © GetcuReone 2019</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageProjectUrl>https://github.com/GetcuReone/ComboPatterns/wiki</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\GetcuReone.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
-    <AssemblyVersion>$(majorVersion).0.0.0</AssemblyVersion>
-    <FileVersion>$(majorVersion).0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ComboPatterns\ComboPatterns.csproj" />
-    <ProjectReference Include="..\ComboPatterns_AFAP\ComboPatterns.AFAP\ComboPatterns.AFAP.csproj" />
+    <ProjectReference Include="..\Adapter\ComboPatterns.Adapter\ComboPatterns.Adapter.csproj">
+      <PrivateAssets>All</PrivateAssets>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\ComboPatterns\ComboPatterns.csproj">
+      <PrivateAssets>All</PrivateAssets>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Facade\ComboPatterns.Facade\ComboPatterns.Facade.csproj">
+      <PrivateAssets>All</PrivateAssets>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Factory\ComboPatterns.Factory\ComboPatterns.Factory.csproj">
+      <PrivateAssets>All</PrivateAssets>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +53,14 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="..\..\dev-pipelines.yml"/>
+    <None Include="..\..\dev-pipelines.yml" />
+    <None Include="..\..\master-pipelines.yml" />
   </ItemGroup>
+
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'all'))" />
+    </ItemGroup>
+  </Target>
 
 </Project>

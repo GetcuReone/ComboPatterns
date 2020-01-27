@@ -1,15 +1,9 @@
-﻿namespace ComboPatterns.Interfaces
+﻿namespace GetcuReone.ComboPatterns.Interfaces
 {
     /// <summary>
     /// Facade interface
     /// </summary>
-    public interface IFacade
+    public interface IFacade : IFacadeCreation
     {
-        /// <summary>
-        /// Facade creation method
-        /// </summary>
-        /// <typeparam name="TFacade">type of facade created</typeparam>
-        /// <returns>facade <typeparamref name="TFacade"/></returns>
-        TFacade GetFacade<TFacade>() where TFacade : IFacade, new();
     }
 }

@@ -2,21 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>GetcuReone.ComboPatterns</RootNamespace>
-    <DocumentationFile>ComboPatterns.xml</DocumentationFile>
-    <PackageId>ComboPatterns.Interfaces</PackageId>
+    <RootNamespace>GetcuReone.ComboPatterns.Facade</RootNamespace>
+    <DocumentationFile>ComboPatterns.Facade.xml</DocumentationFile>
   </PropertyGroup>
-
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\GetcuReone.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\GetcuReone.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\ComboPatterns\ComboPatterns.csproj" />
+  </ItemGroup>
 
   <ItemGroup>
-    <None Update="ComboPatterns.xml">
+    <None Update="ComboPatterns.Facade.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
 </Project>
