@@ -1,5 +1,4 @@
 using ComboPatterns.FacadeTests.Env;
-using ComboPatterns.FactoryTests;
 using GetcuReone.ComboPatterns.Facade;
 using JwtTestAdapter;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
