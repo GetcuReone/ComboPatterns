@@ -8,7 +8,7 @@ steps:
     restoreSolution: '$(solution)'
 
 - task: MSBuild@1
-  displayName: 'MS build'
+  displayName: 'MS build $(Build.Repository.Name)'
   inputs:
     solution: '$(solution)'
     platform: '$(buildPlatform)'

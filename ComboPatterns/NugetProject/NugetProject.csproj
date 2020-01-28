@@ -57,6 +57,7 @@
     <None Include="..\..\master-pipelines.yml" />
     <None Include="..\..\pipeline-steps\step_restore_build_pack.yml" />
     <None Include="..\..\pipeline-steps\step_run_all_tests.yml" />
+    <None Include="..\..\pipeline-steps\step_install_snk.yml" />
   </ItemGroup>
 
   <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
