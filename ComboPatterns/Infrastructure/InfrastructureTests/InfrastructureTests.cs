@@ -1,6 +1,7 @@
 using JwtTestAdapter;
 using JwtTestAdapter.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
@@ -107,6 +108,53 @@ namespace InfrastructureTests
                     {
                         if (method.GetCustomAttribute(typeof(TimeoutAttribute)) == null)
                             Assert.Fail($"method {method.DeclaringType.FullName}.{method.Name} does not have an TimeoutAttribute");
+                    }
+                });
+        }
+
+        [Timeout(Timeouts.Minute.One)]
+        [TestMethod]
+        [Description("[infrastructure] All namespaces start with GetcuReone.ComboPatterns")]
+        public void AllNamespacesStartWithGetcuReoneTestCase()
+        {
+            string beginNamespace = "GetcuReone.ComboPatterns";
+            string rootNameAssemblies = "ComboPatterns";
+
+            Given("Get all file", () => InfrastructureHelper.GetAllFiles(new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.Parent.Parent.Parent))
+                .And("Get all assemblies", files => files.Where(file => file.Name.Contains(".dll")))
+                .And($"Includ only {rootNameAssemblies} assemblies", files => files.Where(file => file.Name.Contains(rootNameAssemblies)))
+                .And("exclude auxiliary assemblies", files =>
+                {
+                    var result = new List<FileInfo>();
+
+                    foreach (FileInfo file in files)
+                    {
+                        if (!file.FullName.Contains("Tests.dll"))
+                        {
+                            LoggingHelper.Info($"file {file.FullName}");
+                            result.Add(file);
+                        }
+                    }
+
+                    return result;
+                })
+                .And("Get assembly infos", files => files.ConvertAll(file => Assembly.LoadFrom(file.FullName)))
+                .When("Get types", assemblies => assemblies.SelectMany(assembly => assembly.GetTypes()))
+                .Then("Check types", types =>
+                {
+                    var invalidTypes = new List<Type>();
+
+                    foreach (Type type in types)
+                    {
+                        if (type.FullName.Length <= beginNamespace.Length)
+                            invalidTypes.Add(type);
+                        else if (!type.FullName.Substring(0, beginNamespace.Length).Equals(beginNamespace, StringComparison.Ordinal))
+                            invalidTypes.Add(type);
+                    }
+
+                    if (invalidTypes.Count != 0)
+                    {
+                        Assert.Fail($"Invalid types: \n{string.Join("\n", invalidTypes.ConvertAll(type => type.FullName))}");
                     }
                 });
         }
