@@ -114,7 +114,7 @@ namespace InfrastructureTests
 
         [Timeout(Timeouts.Minute.One)]
         [TestMethod]
-        [Description("[infrastructure] All namespaces start with GetcuReone.ComboPatterns")]
+        [Description("[infrastructure] all namespaces start with GetcuReone.ComboPatterns")]
         public void AllNamespacesStartWithGetcuReoneTestCase()
         {
             string beginNamespace = "GetcuReone.ComboPatterns";
@@ -155,6 +155,53 @@ namespace InfrastructureTests
                     if (invalidTypes.Count != 0)
                     {
                         Assert.Fail($"Invalid types: \n{string.Join("\n", invalidTypes.ConvertAll(type => type.FullName))}");
+                    }
+                });
+        }
+
+        [Timeout(Timeouts.Minute.One)]
+        [TestMethod]
+        [Description("[infrastructure] assemblies have major version")]
+        public void AssembliesHaveMajorVersionTestCase()
+        {
+            string[] includeAssemblies = new string[]
+            {
+                "NugetProject.dll",
+                "JwtTestAdapter.dll",
+            };
+            string? majorVersion = Environment.GetEnvironmentVariable("majorVersion");
+            string excpectedAssemblyVersion = majorVersion != null
+                ? $"{majorVersion}.0.0.0"
+                : "1.0.0.0";
+
+            string rootNameAssemblies = "ComboPatterns";
+
+            Given("Get all file", () => InfrastructureHelper.GetAllFiles(new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.Parent.Parent.Parent))
+                .And("Get all assemblies", files => files.Where(file => file.Name.Contains(".dll")))
+                .And($"Includ only {rootNameAssemblies} assemblies", files => files.Where(file => file.Name.Contains(rootNameAssemblies) || includeAssemblies.Any(inAss => file.Name.Contains(inAss))))
+                .When("Get assembly infos", files => files.Select(file => Assembly.LoadFrom(file.FullName)))
+                .Then("Checke assembly version", assemblies =>
+                {
+                    var invalidAssemblies = new List<Assembly>();
+
+                    foreach (Assembly assembly in assemblies)
+                    {
+                        if (!assembly.FullName.Contains($"Version={excpectedAssemblyVersion}"))
+                            invalidAssemblies.Add(assembly);
+
+                        CustomAttributeData attr = assembly.CustomAttributes.SingleOrDefault(attr => attr.AttributeType.Name.Equals(nameof(AssemblyFileVersionAttribute), StringComparison.Ordinal));
+
+                        if (attr == null || attr.ConstructorArguments.Count == 0 || attr.ConstructorArguments[0].Value == null)
+                            invalidAssemblies.Add(assembly);
+                        else if (!(attr.ConstructorArguments[0].Value is string attrStr))
+                            invalidAssemblies.Add(assembly);
+                        else if (!attrStr.Equals(excpectedAssemblyVersion, StringComparison.Ordinal))
+                            invalidAssemblies.Add(assembly);
+                    }
+
+                    if (invalidAssemblies.Count != 0)
+                    {
+                        Assert.Fail($"Invalid assemblies: \n{string.Join("\n", invalidAssemblies.ConvertAll(type => type.FullName))}");
                     }
                 });
         }
