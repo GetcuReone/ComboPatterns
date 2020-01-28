@@ -169,7 +169,7 @@ namespace InfrastructureTests
                 "NugetProject.dll",
                 "JwtTestAdapter.dll",
             };
-            string? majorVersion = Environment.GetEnvironmentVariable("majorVersion");
+            string majorVersion = Environment.GetEnvironmentVariable("majorVersion");
             string excpectedAssemblyVersion = majorVersion != null
                 ? $"{majorVersion}.0.0.0"
                 : "1.0.0.0";

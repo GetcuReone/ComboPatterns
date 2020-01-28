@@ -10,7 +10,7 @@ namespace GetcuReone.ComboPatterns.Adapter
         /// <summary>
         /// Factory creating the current adapter
         /// </summary>
-        protected IAbstractFactory Factory { get; private set; }
+        protected virtual IAbstractFactory Factory { get; private set; }
 
         /// <summary>
         /// Adapter creation method
