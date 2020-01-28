@@ -10,7 +10,7 @@ namespace GetcuReone.ComboPatterns.Facade
         /// <summary>
         /// Factory creating the current facade
         /// </summary>
-        protected IAbstractFactory Factory { get; private set; }
+        protected virtual IAbstractFactory Factory { get; private set; }
 
         /// <summary>
         /// Facade creation method
