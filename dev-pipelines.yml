@@ -10,7 +10,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Debug'
   packageVersion: '1.0.0'
-  packageId: '$(solutionName)'
+  packageName: '$(solutionName)'
 
 steps:
 - template: pipeline-steps/step_restore_build_pack.yml
