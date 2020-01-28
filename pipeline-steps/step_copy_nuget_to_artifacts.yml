@@ -2,6 +2,6 @@ steps:
 - task: CopyFiles@2
   displayName: "Copy nuget to artifacts"
   inputs:
-    SourceFolder: '**/NugetProject/bin/$(buildConfiguration)'
-    Contents: 'ComboPatterns.$(packageVersion).nupkg'
+    SourceFolder: '$(Build.Repository.LocalPath)/$(solutionName)/NugetProject/bin/$(buildConfiguration)'
+    Contents: '$(PackageId).$(packageVersion).nupkg'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'

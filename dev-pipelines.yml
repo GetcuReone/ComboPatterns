@@ -5,7 +5,8 @@ pool:
   vmImage: 'windows-2019'
 
 variables:
-  solution: '**/*.sln'
+  solutionName: 'ComboPatterns'
+  solution: '**/$(solutionName).sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Debug'
   packageVersion: '1.0.0'
