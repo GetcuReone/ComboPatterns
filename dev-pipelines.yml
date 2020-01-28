@@ -14,3 +14,5 @@ steps:
 - template: pipeline-steps/step_restore_build_pack.yml
 
 - template: pipeline-steps/step_run_all_tests.yml
+
+- template: pipeline-steps/step_copy_nuget_to_artifacts.yml
