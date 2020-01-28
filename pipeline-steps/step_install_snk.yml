@@ -10,4 +10,4 @@ steps:
 
     cp '$(snk_file.secureFilePath)' '$(Build.Repository.LocalPath)/$(solutionName)'
     echo copied '$(snk_file.secureFilePath)' to '$(Build.Repository.LocalPath)\$(solutionName)'
-  displayName: 'Сopy file snk to projects'
+  displayName: 'Install snk certificate'
