@@ -5,12 +5,16 @@ pool:
   vmImage: 'windows-2019'
 
 variables:
-  solution: '**/*.sln'
+  solutionName: 'ComboPatterns'
+  solution: '**/$(solutionName).sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Debug'
   packageVersion: '1.0.0'
+  packageFileName: '$(solutionName).$(packageVersion).nupkg'
 
 steps:
 - template: pipeline-steps/step_restore_build_pack.yml
 
 - template: pipeline-steps/step_run_all_tests.yml
+
+- template: pipeline-steps/step_copy_nuget_to_artifacts.yml
