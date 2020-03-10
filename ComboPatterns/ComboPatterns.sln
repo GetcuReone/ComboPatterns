@@ -9,27 +9,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NugetProject", "NugetProjec
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A27BCEE4-55F4-45B4-AE16-7A7DFD6334D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfrastructureTests", "Infrastructure\InfrastructureTests\InfrastructureTests.csproj", "{0DC8EE3D-C15C-4E7E-9E16-BACD7215CF14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfrastructureTests", "Infrastructure\InfrastructureTests\InfrastructureTests.csproj", "{0DC8EE3D-C15C-4E7E-9E16-BACD7215CF14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtTestAdapter", "Infrastructure\JwtTestAdapter\JwtTestAdapter.csproj", "{0D3E3849-B92A-452E-8FAE-C75B15BEDB62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtTestAdapter", "Infrastructure\JwtTestAdapter\JwtTestAdapter.csproj", "{0D3E3849-B92A-452E-8FAE-C75B15BEDB62}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Factory", "Factory", "{D7BFBDCB-DC49-405B-9B6D-9CCCBC4BEE33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.Factory", "Factory\ComboPatterns.Factory\ComboPatterns.Factory.csproj", "{81D66402-43B8-442E-BE66-AD57B8F44E33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns.Factory", "Factory\ComboPatterns.Factory\ComboPatterns.Factory.csproj", "{81D66402-43B8-442E-BE66-AD57B8F44E33}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns.FactoryTests", "Factory\ComboPatterns.FactoryTests\ComboPatterns.FactoryTests.csproj", "{173CD508-3126-4EAC-B256-FA112C87A4DF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facade", "Facade", "{5547A02B-32C6-4A51-AB69-A18F7CBDE599}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.Facade", "Facade\ComboPatterns.Facade\ComboPatterns.Facade.csproj", "{A44C0AC8-48FD-4F29-B433-40717B70F1B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns.Facade", "Facade\ComboPatterns.Facade\ComboPatterns.Facade.csproj", "{A44C0AC8-48FD-4F29-B433-40717B70F1B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.FacadeTests", "Facade\ComboPatterns.FacadeTests\ComboPatterns.FacadeTests.csproj", "{81F264E8-F6D0-482B-B8A3-B3EFD4C286E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns.FacadeTests", "Facade\ComboPatterns.FacadeTests\ComboPatterns.FacadeTests.csproj", "{81F264E8-F6D0-482B-B8A3-B3EFD4C286E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapter", "Adapter", "{F3661EFB-A06D-47AD-9FE7-9B3AD1F96B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.Adapter", "Adapter\ComboPatterns.Adapter\ComboPatterns.Adapter.csproj", "{AC2973BC-916E-4A07-BE36-6ED7CEEC05D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns.Adapter", "Adapter\ComboPatterns.Adapter\ComboPatterns.Adapter.csproj", "{AC2973BC-916E-4A07-BE36-6ED7CEEC05D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboPatterns.AdapterTests", "Adapter\ComboPatterns.AdapterTests\ComboPatterns.AdapterTests.csproj", "{40053016-AD1C-4FC6-ACF6-D99EE7928B5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns.AdapterTests", "Adapter\ComboPatterns.AdapterTests\ComboPatterns.AdapterTests.csproj", "{40053016-AD1C-4FC6-ACF6-D99EE7928B5D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pipelines", "Infrastructure\Pipelines\Pipelines.csproj", "{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +79,10 @@ Global
 		{40053016-AD1C-4FC6-ACF6-D99EE7928B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40053016-AD1C-4FC6-ACF6-D99EE7928B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40053016-AD1C-4FC6-ACF6-D99EE7928B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +96,7 @@ Global
 		{81F264E8-F6D0-482B-B8A3-B3EFD4C286E5} = {5547A02B-32C6-4A51-AB69-A18F7CBDE599}
 		{AC2973BC-916E-4A07-BE36-6ED7CEEC05D5} = {F3661EFB-A06D-47AD-9FE7-9B3AD1F96B10}
 		{40053016-AD1C-4FC6-ACF6-D99EE7928B5D} = {F3661EFB-A06D-47AD-9FE7-9B3AD1F96B10}
+		{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79} = {A27BCEE4-55F4-45B4-AE16-7A7DFD6334D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27B688AF-8942-4314-AEA0-206D9F01CB01}
