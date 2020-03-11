@@ -66,6 +66,8 @@ namespace InfrastructureTests
                         "LICENSE-2.0.txt"
                     };
 
+                    Assert.AreEqual(files.Length + 5, fileNames.Length, "Expected a different number of files in the package.");
+
                     foreach (string file in files)
                         Assert.IsTrue(fileNames.Any(fileFullName => fileFullName == file), $"The archive does not contain a file {file}");
                 });
