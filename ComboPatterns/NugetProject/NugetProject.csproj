@@ -8,19 +8,44 @@
     <PackageId>ComboPatterns</PackageId>
     <Product>ComboPatterns</Product>
     <Description>My implementation of a combination of patterns</Description>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE-2.0.txt</PackageLicenseFile>
     <RepositoryUrl>https://github.com/GetcuReone/ComboPatterns.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>abstractfactory factory facade adapter proxy getcureone combopatterns</PackageTags>
-    <PackageReleaseNotes>made property Factory is virtual</PackageReleaseNotes>
+    <PackageReleaseNotes>Removed an empty file from the package.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>Copyright © GetcuReone 2019</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageProjectUrl>https://github.com/GetcuReone/ComboPatterns/wiki</PackageProjectUrl>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!--Transfer information to a nuspec file-->
+    <NuspecFile>.nuspec</NuspecFile>
+    <!--General Information Transfer-->
+    <NuspecProperties>$(NuspecProperties);id=$(PackageId)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);author=$(Authors)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);Description=$(Description)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);PackageTags=$(PackageTags)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);PackageReleaseNotes=$(PackageReleaseNotes)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);NeutralLanguage=$(NeutralLanguage)</NuspecProperties>
+    <!--Transfer project information-->
+    <NuspecProperties>$(NuspecProperties);PackageProjectUrl=$(PackageProjectUrl)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);RepositoryType=$(RepositoryType)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);RepositoryUrl=$(RepositoryUrl)</NuspecProperties>
+    <!--Transfer license information-->
+    <NuspecProperties>$(NuspecProperties);PackageLicenseFile=$(PackageLicenseFile)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);PackageRequireLicenseAcceptance=$(PackageRequireLicenseAcceptance)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);Copyright=$(Copyright)</NuspecProperties>
+    <!--Transfer another information-->
+    <NuspecProperties>$(NuspecProperties);Configuration=$(Configuration)</NuspecProperties>
+    <NuspecProperties>$(NuspecProperties);TargetFramework=$(TargetFramework)</NuspecProperties>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <packageVersion>1.0.0</packageVersion>
+    <NuspecProperties>$(NuspecProperties);version=$(packageVersion)</NuspecProperties>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -29,6 +54,7 @@
     <DelaySign>false</DelaySign>
     <AssemblyVersion>$(majorVersion).0.0.0</AssemblyVersion>
     <FileVersion>$(majorVersion).0.0.0</FileVersion>
+    <NuspecProperties>$(NuspecProperties);version=$(packageVersion)</NuspecProperties>
   </PropertyGroup>
 
   <ItemGroup>
@@ -52,8 +78,7 @@
 
   <ItemGroup>
     <None Include="..\..\LICENSE-2.0.txt">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="..\..\README.md">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
