@@ -11,7 +11,7 @@ variables:
   buildConfiguration: 'Release'
   majorVersion: '3'
   minorVersion: '0'
-  pathVersion: '1'
+  pathVersion: '2'
   packageVersion: '$(majorVersion).$(minorVersion).$(pathVersion)'
   packageFileName: '$(solutionName).$(packageVersion).nupkg'
 

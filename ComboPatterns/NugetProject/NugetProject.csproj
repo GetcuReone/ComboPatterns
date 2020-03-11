@@ -12,7 +12,7 @@
     <RepositoryUrl>https://github.com/GetcuReone/ComboPatterns.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>abstractfactory factory facade adapter proxy getcureone combopatterns</PackageTags>
-    <PackageReleaseNotes>made property Factory is virtual</PackageReleaseNotes>
+    <PackageReleaseNotes>Removed an empty file from the package.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>Copyright © GetcuReone 2019</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
