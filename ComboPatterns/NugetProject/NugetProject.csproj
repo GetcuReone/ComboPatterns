@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
 
-    <Authors>GetcuReone</Authors>
+    <Authors>Itua Juel-Gaben</Authors>
     <PackageId>ComboPatterns</PackageId>
     <Product>ComboPatterns</Product>
     <Description>My implementation of a combination of patterns</Description>
@@ -14,7 +14,7 @@
     <PackageTags>abstractfactory factory facade adapter proxy getcureone combopatterns</PackageTags>
     <PackageReleaseNotes>Removed an empty file from the package.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Copyright>Copyright © GetcuReone 2019</Copyright>
+    <Copyright>Copyright © 2019 $(Authors)</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageProjectUrl>https://github.com/GetcuReone/ComboPatterns/wiki</PackageProjectUrl>
   </PropertyGroup>
