@@ -10,8 +10,8 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   majorVersion: '3'
-  minorVersion: '0'
-  pathVersion: '3'
+  minorVersion: '1'
+  pathVersion: '0'
   packageVersion: '$(majorVersion).$(minorVersion).$(pathVersion)'
   packageFileName: '$(solutionName).$(packageVersion).nupkg'
 

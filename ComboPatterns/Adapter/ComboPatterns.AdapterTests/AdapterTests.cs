@@ -18,7 +18,6 @@ namespace ComboPatterns.AdapterTests
                 .Then("Check result", adapter =>
                 {
                     Assert.IsNotNull(adapter, "adapter cannot be null");
-                    Assert.AreEqual(1, Factory.CountCallCreateObject, "there should have been 1 call CreateObject");
                 });
         }
 
@@ -58,8 +57,6 @@ namespace ComboPatterns.AdapterTests
                     Assert.AreNotEqual(adapter1, adapter2, "facades match");
                     Assert.AreEqual(1, adapter1.CountCallGetAdapter, "there should have been 1 call GetAdapter");
                     Assert.AreEqual(0, adapter2.CountCallGetAdapter, "there should have been 0 call GetAdapter");
-
-                    Assert.AreEqual(2, Factory.CountCallCreateObject, "there should have been 1 call CreateObject");
                 });
         }
     }
