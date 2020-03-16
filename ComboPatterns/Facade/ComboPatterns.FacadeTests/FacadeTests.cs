@@ -18,7 +18,6 @@ namespace ComboPatterns.FacadeTests
                 .Then("Check result", facade =>
                 {
                     Assert.IsNotNull(facade, "facade cannot be null");
-                    Assert.AreEqual(1, Factory.CountCallCreateObject, "there should have been 1 call CreateObject");
                 });
         }
 
@@ -58,8 +57,6 @@ namespace ComboPatterns.FacadeTests
                     Assert.AreNotEqual(facade1, facade2, "facades match");
                     Assert.AreEqual(1, facade1.CountCallGetFacade, "there should have been 1 call GetFacade");
                     Assert.AreEqual(0, facade2.CountCallGetFacade, "there should have been 0 call GetFacade");
-
-                    Assert.AreEqual(2, Factory.CountCallCreateObject, "there should have been 1 call CreateObject");
                 });
         }
     }

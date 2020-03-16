@@ -31,17 +31,12 @@ namespace GetcuReone.ComboPatterns.Adapter
         public static TAdapter Create<TAdapter>(IAbstractFactory factory)
             where TAdapter : IAdapter, new()
         {
-            return factory.CreateObject<object, TAdapter>(
-                (_) =>
-                {
-                    var adapter = new TAdapter();
+            var adapter = new TAdapter();
 
-                    if (adapter is AdapterBase adapterBase)
-                        adapterBase.Factory = factory;
+            if (adapter is AdapterBase adapterBase)
+                adapterBase.Factory = factory;
 
-                    return adapter;
-                },
-                null);
+            return adapter;
         }
     }
 }

@@ -20,7 +20,6 @@ namespace ComboPatterns.AdapterTests
                 .Then("Check result", proxy =>
                 {
                     Assert.IsNotNull(proxy, "proxy cannot be null");
-                    Assert.AreEqual(2, Factory.CountCallCreateObject, "there should have been 2 call CreateObject");
                 });
         }
 
@@ -52,7 +51,6 @@ namespace ComboPatterns.AdapterTests
                 {
                     Assert.IsNotNull(proxy, "proxy cannot be null");
                     Assert.AreEqual(param, proxy.Param, "expected another value parameter");
-                    Assert.AreEqual(2, Factory.CountCallCreateObject, "there should have been 2 call CreateObject");
                 });
         }
 

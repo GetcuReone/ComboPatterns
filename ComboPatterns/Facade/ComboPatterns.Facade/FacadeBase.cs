@@ -31,17 +31,12 @@ namespace GetcuReone.ComboPatterns.Facade
         public static TFacade Create<TFacade>(IAbstractFactory factory)
             where TFacade : IFacade, new()
         {
-            return factory.CreateObject<object, TFacade>(
-                (_) =>
-                {
-                    var facade = new TFacade();
+            var facade = new TFacade();
 
-                    if (facade is FacadeBase facadeBase)
-                        facadeBase.Factory = factory;
+            if (facade is FacadeBase facadeBase)
+                facadeBase.Factory = factory;
 
-                    return facade;
-                },
-                null);
+            return facade;
         }
     }
 }
