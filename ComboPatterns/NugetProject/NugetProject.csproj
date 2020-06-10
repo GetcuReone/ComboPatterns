@@ -23,7 +23,10 @@
   <PropertyGroup>
     <!--Transfer information to a nuspec file-->
     <NuspecFile>.nuspec</NuspecFile>
-    <!--General Information Transfer-->
+    <!--
+    General Information Transfer.
+    variable 'packageVersion' define in pipeline
+    -->
     <NuspecProperties>$(NuspecProperties);id=$(PackageId)</NuspecProperties>
     <NuspecProperties>$(NuspecProperties);version=$(packageVersion)</NuspecProperties>
     <NuspecProperties>$(NuspecProperties);author=$(Authors)</NuspecProperties>
@@ -46,7 +49,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\GetcuReone.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>$(snkFilePath)</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
     <AssemblyVersion>$(majorVersion).0.0.0</AssemblyVersion>
     <FileVersion>$(majorVersion).0.0.0</FileVersion>
