@@ -8,8 +8,9 @@ namespace ComboPatterns.FactoryTests
     public class CreateObjectTests : FactoryTestBase<Env.Factory>
     {
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Factory)]
+        [Description("Create object.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[factory] create object")]
         public void CreateObjectTestCese()
         {
             GivenCreateFactory()
@@ -21,8 +22,9 @@ namespace ComboPatterns.FactoryTests
         }
 
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Factory), TestCategory(TC.Negative)]
+        [Description("Create object without func.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[factory][negative] create object without func")]
         public void CreateObjectWithoutFuncTestCase()
         {
             GivenCreateFactory()
@@ -35,8 +37,9 @@ namespace ComboPatterns.FactoryTests
         }
 
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Factory)]
+        [Description("Create object with parameter.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[factory] create object with parameter")]
         public void CreateObjectWithParamTestCase()
         {
             object paramObj = new object();

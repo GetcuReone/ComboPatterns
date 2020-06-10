@@ -1,6 +1,6 @@
 ﻿using GetcuReone.ComboPatterns.Factory;
-using JwtTestAdapter;
-using JwtTestAdapter.Entities;
+using GetcuReone.GwtTestFramework;
+using GetcuReone.GwtTestFramework.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ComboPatterns.AdapterTests

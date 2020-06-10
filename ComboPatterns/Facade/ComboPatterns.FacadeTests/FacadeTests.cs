@@ -9,8 +9,9 @@ namespace ComboPatterns.FacadeTests
     public sealed class FacadeTests : FactoryTestBase<Factory>
     {
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Facade)]
+        [Description("Create facade.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[facade] create facade")]
         public void CreateFacadeTestCase()
         {
             GivenCreateFactory()
@@ -22,8 +23,9 @@ namespace ComboPatterns.FacadeTests
         }
 
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Facade)]
+        [Description("Bind factory.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[facade] bind factory")]
         public void BindFactoryTestCase()
         {
             GivenCreateFactory()
@@ -35,8 +37,9 @@ namespace ComboPatterns.FacadeTests
         }
 
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Facade)]
+        [Description("Get facade.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[facade] get facade")]
         public void GetFacadeTestCase()
         {
             Facade facade1 = null;
