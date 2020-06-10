@@ -31,8 +31,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns.Adapter", "Ad
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboPatterns.AdapterTests", "Adapter\ComboPatterns.AdapterTests\ComboPatterns.AdapterTests.csproj", "{40053016-AD1C-4FC6-ACF6-D99EE7928B5D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pipelines", "Infrastructure\Pipelines\Pipelines.csproj", "{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,10 +77,6 @@ Global
 		{40053016-AD1C-4FC6-ACF6-D99EE7928B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40053016-AD1C-4FC6-ACF6-D99EE7928B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40053016-AD1C-4FC6-ACF6-D99EE7928B5D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,7 +90,6 @@ Global
 		{81F264E8-F6D0-482B-B8A3-B3EFD4C286E5} = {5547A02B-32C6-4A51-AB69-A18F7CBDE599}
 		{AC2973BC-916E-4A07-BE36-6ED7CEEC05D5} = {F3661EFB-A06D-47AD-9FE7-9B3AD1F96B10}
 		{40053016-AD1C-4FC6-ACF6-D99EE7928B5D} = {F3661EFB-A06D-47AD-9FE7-9B3AD1F96B10}
-		{B8D4D937-B9ED-4AF4-BEF0-55E663A36E79} = {A27BCEE4-55F4-45B4-AE16-7A7DFD6334D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27B688AF-8942-4314-AEA0-206D9F01CB01}
