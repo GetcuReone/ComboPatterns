@@ -6,10 +6,7 @@ trigger:
     exclude:
     - master
     - dev/*
-pr:
-  branches:
-    exclude:
-    - '*'
+pr: none
 
 resources:
   repositories:
