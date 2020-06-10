@@ -9,8 +9,9 @@ namespace ComboPatterns.AdapterTests
     public sealed class AdapterTests : FactoryTestBase<Factory>
     {
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Adapter)]
+        [Description("Create adapter.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[adapter] create adapter")]
         public void CreateAdapterTestCase()
         {
             GivenCreateFactory()
@@ -22,8 +23,9 @@ namespace ComboPatterns.AdapterTests
         }
 
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Adapter)]
+        [Description("Bind factory.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[adapter] bind factory")]
         public void BindFactoryTestCase()
         {
             GivenCreateFactory()
@@ -35,8 +37,9 @@ namespace ComboPatterns.AdapterTests
         }
 
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Adapter)]
+        [Description("Get adapter.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[adapter] get adapter")]
         public void GetAdapterTestCase()
         {
             Adapter adapter1 = null;

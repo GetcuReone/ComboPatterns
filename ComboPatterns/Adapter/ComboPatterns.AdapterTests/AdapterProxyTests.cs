@@ -10,8 +10,9 @@ namespace ComboPatterns.AdapterTests
     public sealed class AdapterProxyTests : FactoryTestBase<Factory>
     {
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Adapter)]
+        [Description("Create proxy.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[adapter] create proxy")]
         public void CreateProxyTestCase()
         {
             GivenCreateFactory()
@@ -24,8 +25,9 @@ namespace ComboPatterns.AdapterTests
         }
 
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Adapter), TestCategory(TC.Negative)]
+        [Description("Create adapter without createProxyFunc.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[adapter][negative] create adapter without createProxyFunc")]
         public void CreateAdapterWithoutFuncTestCase()
         {
             GivenCreateFactory()
@@ -38,8 +40,9 @@ namespace ComboPatterns.AdapterTests
         }
 
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Adapter)]
+        [Description("Create proxy with parameter.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[adapter] create proxy with parameter")]
         public void CreateProxyWithParamTestCase()
         {
             var param = new object();
@@ -55,8 +58,9 @@ namespace ComboPatterns.AdapterTests
         }
 
         [TestMethod]
+        [TestCategory(TC.Unit), TestCategory(TC.Adapter), TestCategory(TC.Negative)]
+        [Description("Create adapter without createProxyFunc.")]
         [Timeout(Timeouts.MilliSecond.Hundred)]
-        [Description("[adapter][negative] create adapter without createProxyFunc")]
         public void CreateAdapterParamWithoutFuncTestCase()
         {
             GivenCreateFactory()
