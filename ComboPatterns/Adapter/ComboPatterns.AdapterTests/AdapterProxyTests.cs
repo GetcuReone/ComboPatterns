@@ -27,7 +27,7 @@ namespace ComboPatterns.AdapterTests
         [TestMethod]
         [TestCategory(TC.Unit), TestCategory(TC.Adapter), TestCategory(TC.Negative)]
         [Description("Create adapter without createProxyFunc.")]
-        [Timeout(Timeouts.MilliSecond.Hundred)]
+        [Timeout(Timeouts.MilliSecond.FiveHundred)]
         public void CreateAdapterWithoutFuncTestCase()
         {
             GivenCreateFactory()
