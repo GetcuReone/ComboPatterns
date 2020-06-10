@@ -70,16 +70,17 @@ namespace InfrastructureTests
                 })
                 .Then("Check archive .nupkg", fileNames =>
                 {
+                    string subfolder = "lib";
                     var files = new string[]
                     {
-                        "lib/netstandard2.0/ComboPatterns.dll",
-                        "lib/netstandard2.0/ComboPatterns.xml",
-                        "lib/netstandard2.0/ComboPatterns.Factory.dll",
-                        "lib/netstandard2.0/ComboPatterns.Factory.xml",
-                        "lib/netstandard2.0/ComboPatterns.Facade.dll",
-                        "lib/netstandard2.0/ComboPatterns.Facade.xml",
-                        "lib/netstandard2.0/ComboPatterns.Adapter.dll",
-                        "lib/netstandard2.0/ComboPatterns.Adapter.xml",
+                        Path.Combine(subfolder, _targetFramework, "ComboPatterns.dll"),
+                        Path.Combine(subfolder, _targetFramework, "ComboPatterns.xml"),
+                        Path.Combine(subfolder, _targetFramework, "ComboPatterns.Factory.dll"),
+                        Path.Combine(subfolder, _targetFramework, "ComboPatterns.Factory.xml"),
+                        Path.Combine(subfolder, _targetFramework, "ComboPatterns.Facade.dll"),
+                        Path.Combine(subfolder, _targetFramework, "ComboPatterns.Facade.xml"),
+                        Path.Combine(subfolder, _targetFramework, "ComboPatterns.Adapter.dll"),
+                        Path.Combine(subfolder, _targetFramework, "ComboPatterns.Adapter.xml"),
                         "LICENSE-2.0.txt",
                         "README.md",
                     };
