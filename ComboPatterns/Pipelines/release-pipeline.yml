@@ -35,7 +35,7 @@ variables:
   - name: 'sourceBranchName'
     value: $[replace(variables['System.PullRequest.SourceBranch'], 'refs/heads/', '')]
   - name: 'patchVersion'
-    value: $[counter(format('{0}-{1}.{2}', variables.sourceBranchName, variables.majorVersion, variables.minorVersion), 0)]
+    value: $[counter(format('{0}-{1}.{2}', variables.sourceBranchName, variables.majorVersion, variables.minorVersion), 1)]
   - name: 'buildName'
     value: $[format('{0}-{1}-{2}.{3}.{4}', variables['sourceBranchName'], variables['Build.DefinitionName'], variables['majorVersion'], variables['minorVersion'], variables['patchVersion'])]
 
