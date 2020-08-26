@@ -24,6 +24,10 @@
         <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     </PropertyGroup>
 
+    <PropertyGroup Condition="'$(PackageVersion)'==''">
+        <PackageVersion>1.0.0</PackageVersion>
+    </PropertyGroup>
+
     <PropertyGroup>
         <!--Transfer information to a nuspec file-->
         <NuspecFile>.nuspec</NuspecFile>
