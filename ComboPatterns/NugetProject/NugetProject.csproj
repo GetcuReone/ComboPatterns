@@ -1,92 +1,96 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
-    <Authors>Itua Juel-Gaben</Authors>
-    <PackageId>ComboPatterns</PackageId>
-    <Product>ComboPatterns</Product>
-    <Description>My implementation of a combination of patterns</Description>
-    <PackageLicenseFile>LICENSE-2.0.txt</PackageLicenseFile>
-    <RepositoryUrl>https://github.com/GetcuReone/ComboPatterns.git</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>abstractfactory factory facade adapter proxy getcureone combopatterns</PackageTags>
-    <PackageReleaseNotes>Creating a facade and an adapter whiter do not call the default CreateObject method.</PackageReleaseNotes>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Copyright>Copyright © 2019 $(Authors)</Copyright>
-    <NeutralLanguage>en-US</NeutralLanguage>
-    <PackageProjectUrl>https://github.com/GetcuReone/ComboPatterns/wiki</PackageProjectUrl>
-  </PropertyGroup>
+        <Authors>Itua Juel-Gaben</Authors>
+        <PackageId>ComboPatterns</PackageId>
+        <Product>ComboPatterns</Product>
+        <Description>My implementation of a combination of patterns</Description>
+        <PackageLicenseFile>LICENSE-2.0.txt</PackageLicenseFile>
+        <RepositoryUrl>https://github.com/GetcuReone/ComboPatterns.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>abstractfactory factory facade adapter proxy getcureone combopatterns</PackageTags>
+        <PackageReleaseNotes>Creating a facade and an adapter whiter do not call the default CreateObject method.</PackageReleaseNotes>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <Copyright>Copyright © 2019 $(Authors)</Copyright>
+        <NeutralLanguage>en-US</NeutralLanguage>
+        <PackageProjectUrl>https://github.com/GetcuReone/ComboPatterns/wiki</PackageProjectUrl>
+    </PropertyGroup>
 
-  <PropertyGroup>
-    <!--Transfer information to a nuspec file-->
-    <NuspecFile>.nuspec</NuspecFile>
-    <!--
-    General Information Transfer.
-    variable 'packageVersion' define in pipeline
-    -->
-    <NuspecProperties>$(NuspecProperties);id=$(PackageId)</NuspecProperties>
-    <NuspecProperties>$(NuspecProperties);version=$(packageVersion)</NuspecProperties>
-    <NuspecProperties>$(NuspecProperties);author=$(Authors)</NuspecProperties>
-    <NuspecProperties>$(NuspecProperties);Description=$(Description)</NuspecProperties>
-    <NuspecProperties>$(NuspecProperties);PackageTags=$(PackageTags)</NuspecProperties>
-    <NuspecProperties>$(NuspecProperties);PackageReleaseNotes=$(PackageReleaseNotes)</NuspecProperties>
-    <NuspecProperties>$(NuspecProperties);NeutralLanguage=$(NeutralLanguage)</NuspecProperties>
-    <!--Transfer project information-->
-    <NuspecProperties>$(NuspecProperties);PackageProjectUrl=$(PackageProjectUrl)</NuspecProperties>
-    <NuspecProperties>$(NuspecProperties);RepositoryType=$(RepositoryType)</NuspecProperties>
-    <NuspecProperties>$(NuspecProperties);RepositoryUrl=$(RepositoryUrl)</NuspecProperties>
-    <!--Transfer license information-->
-    <NuspecProperties>$(NuspecProperties);PackageLicenseFile=$(PackageLicenseFile)</NuspecProperties>
-    <NuspecProperties>$(NuspecProperties);PackageRequireLicenseAcceptance=$(PackageRequireLicenseAcceptance)</NuspecProperties>
-    <NuspecProperties>$(NuspecProperties);Copyright=$(Copyright)</NuspecProperties>
-    <!--Transfer another information-->
-    <NuspecProperties>$(NuspecProperties);Configuration=$(Configuration)</NuspecProperties>
-    <NuspecProperties>$(NuspecProperties);TargetFramework=$(TargetFramework)</NuspecProperties>
-  </PropertyGroup>
+    <PropertyGroup>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>$(snkFilePath)</AssemblyOriginatorKeyFile>
-    <DelaySign>false</DelaySign>
-    <AssemblyVersion>$(majorVersion).0.0.0</AssemblyVersion>
-    <FileVersion>$(majorVersion).0.0.0</FileVersion>
-  </PropertyGroup>
+    <PropertyGroup>
+        <!--Transfer information to a nuspec file-->
+        <NuspecFile>.nuspec</NuspecFile>
+        <!--
+        General Information Transfer.
+        variable 'packageVersion' define in pipeline
+        -->
+        <NuspecProperties>$(NuspecProperties);id=$(PackageId)</NuspecProperties>
+        <NuspecProperties>$(NuspecProperties);version=$(packageVersion)</NuspecProperties>
+        <NuspecProperties>$(NuspecProperties);author=$(Authors)</NuspecProperties>
+        <NuspecProperties>$(NuspecProperties);Description=$(Description)</NuspecProperties>
+        <NuspecProperties>$(NuspecProperties);PackageTags=$(PackageTags)</NuspecProperties>
+        <NuspecProperties>$(NuspecProperties);PackageReleaseNotes=$(PackageReleaseNotes)</NuspecProperties>
+        <NuspecProperties>$(NuspecProperties);NeutralLanguage=$(NeutralLanguage)</NuspecProperties>
+        <!--Transfer project information-->
+        <NuspecProperties>$(NuspecProperties);PackageProjectUrl=$(PackageProjectUrl)</NuspecProperties>
+        <NuspecProperties>$(NuspecProperties);RepositoryType=$(RepositoryType)</NuspecProperties>
+        <NuspecProperties>$(NuspecProperties);RepositoryUrl=$(RepositoryUrl)</NuspecProperties>
+        <!--Transfer license information-->
+        <NuspecProperties>$(NuspecProperties);PackageLicenseFile=$(PackageLicenseFile)</NuspecProperties>
+        <NuspecProperties>$(NuspecProperties);PackageRequireLicenseAcceptance=$(PackageRequireLicenseAcceptance)</NuspecProperties>
+        <NuspecProperties>$(NuspecProperties);Copyright=$(Copyright)</NuspecProperties>
+        <!--Transfer another information-->
+        <NuspecProperties>$(NuspecProperties);Configuration=$(Configuration)</NuspecProperties>
+        <NuspecProperties>$(NuspecProperties);TargetFramework=$(TargetFramework)</NuspecProperties>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Adapter\ComboPatterns.Adapter\ComboPatterns.Adapter.csproj">
-      <PrivateAssets>All</PrivateAssets>
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\ComboPatterns\ComboPatterns.csproj">
-      <PrivateAssets>All</PrivateAssets>
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\Facade\ComboPatterns.Facade\ComboPatterns.Facade.csproj">
-      <PrivateAssets>All</PrivateAssets>
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="..\Factory\ComboPatterns.Factory\ComboPatterns.Factory.csproj">
-      <PrivateAssets>All</PrivateAssets>
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-    </ProjectReference>
-  </ItemGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>$(snkFilePath)</AssemblyOriginatorKeyFile>
+        <DelaySign>false</DelaySign>
+        <AssemblyVersion>$(majorVersion).0.0.0</AssemblyVersion>
+        <FileVersion>$(majorVersion).0.0.0</FileVersion>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\..\LICENSE-2.0.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\..\README.md">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
     <ItemGroup>
-      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'all'))" />
+        <ProjectReference Include="..\Adapter\ComboPatterns.Adapter\ComboPatterns.Adapter.csproj">
+            <PrivateAssets>All</PrivateAssets>
+            <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+        </ProjectReference>
+        <ProjectReference Include="..\ComboPatterns\ComboPatterns.csproj">
+            <PrivateAssets>All</PrivateAssets>
+            <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+        </ProjectReference>
+        <ProjectReference Include="..\Facade\ComboPatterns.Facade\ComboPatterns.Facade.csproj">
+            <PrivateAssets>All</PrivateAssets>
+            <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+        </ProjectReference>
+        <ProjectReference Include="..\Factory\ComboPatterns.Factory\ComboPatterns.Factory.csproj">
+            <PrivateAssets>All</PrivateAssets>
+            <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+        </ProjectReference>
     </ItemGroup>
-  </Target>
+
+    <ItemGroup>
+        <None Include="..\..\LICENSE-2.0.txt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="..\..\README.md">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+        <ItemGroup>
+            <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'all'))" />
+        </ItemGroup>
+    </Target>
 
 </Project>
