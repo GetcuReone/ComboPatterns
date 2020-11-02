@@ -20,6 +20,7 @@
 
     <dependencies>
       <group targetFramework=".$TargetFramework$">
+          <dependency id="System.Threading.Tasks.Extensions" version="[4.5.4,)" />
       </group>
     </dependencies>
   </metadata>
