@@ -1,8 +1,8 @@
 ﻿using ComboPatterns.AdapterTests.Env;
 using GetcuReone.ComboPatterns.Adapter;
-using JwtTestAdapter;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using TestCommon;
 
 namespace ComboPatterns.AdapterTests
 {
@@ -21,7 +21,8 @@ namespace ComboPatterns.AdapterTests
                 .Then("Check result", proxy =>
                 {
                     Assert.IsNotNull(proxy, "proxy cannot be null");
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -36,7 +37,8 @@ namespace ComboPatterns.AdapterTests
                 {
                     Assert.IsNotNull(ex, "error cannot be null");
                     Assert.AreEqual("createProxyFunc", ((ArgumentNullException)ex.InnerException).ParamName, "expected another message");
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -54,7 +56,8 @@ namespace ComboPatterns.AdapterTests
                 {
                     Assert.IsNotNull(proxy, "proxy cannot be null");
                     Assert.AreEqual(param, proxy.Param, "expected another value parameter");
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -69,7 +72,8 @@ namespace ComboPatterns.AdapterTests
                 {
                     Assert.IsNotNull(ex, "error cannot be null");
                     Assert.AreEqual("createProxyFuncWithParam", ((ArgumentNullException)ex.InnerException).ParamName, "expected another message");
-                });
+                })
+                .Run();
         }
     }
 }
