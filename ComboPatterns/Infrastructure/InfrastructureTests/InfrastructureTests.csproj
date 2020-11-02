@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JwtTestAdapter\JwtTestAdapter.csproj" />
+    <ProjectReference Include="..\TestCommon\TestCommon.csproj" />
   </ItemGroup>
 
 </Project>

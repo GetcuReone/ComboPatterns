@@ -1,5 +1,10 @@
 # Welcome to the ComboPatterns!
 
+[![NuGet version (ComboPatterns)](https://img.shields.io/nuget/v/ComboPatterns.svg?style=flat-square)](https://www.nuget.org/packages/ComboPatterns/)
+[![Build status](https://dev.azure.com/GetcuReone-Studio/OpenSource-Projects/_apis/build/status/master-ComboPatterns?branchName=master)](https://dev.azure.com/GetcuReone-Studio/OpenSource-Projects/_build/latest?definitionId=8)
+[![Azure DevOps tests](https://img.shields.io/azure-devops/tests/GetcuReone-Studio/OpenSource-Projects/8?label=Unit%20tests)](https://dev.azure.com/GetcuReone-Studio/OpenSource-Projects/_build/latest?definitionId=8)
+[![GitHub](https://img.shields.io/github/license/GetcuReone/ComboPatterns)](https://github.com/GetcuReone/ComboPatterns/blob/master/LICENSE-2.0.txt)
+
 This project is my implementation of pattern combinations that I worked with.
 Over time, I will replenish the documentation. Implemented pattern combinations will be listed on this page.
 For implementation, I used c # language.
