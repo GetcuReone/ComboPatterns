@@ -11,7 +11,7 @@ namespace ComboPatterns.FacadeTests
     {
         protected TFactory Factory { get; private set; }
 
-        protected GivenBlock<TFactory> GivenCreateFactory()
+        protected GivenBlock<TFactory, TFactory> GivenCreateFactory()
         {
             return Given("Create factory", () => new TFactory())
                 .And("Set factory", factory => Factory = factory);

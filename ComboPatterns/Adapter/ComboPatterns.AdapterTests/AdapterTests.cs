@@ -1,7 +1,7 @@
 using ComboPatterns.AdapterTests.Env;
 using GetcuReone.ComboPatterns.Adapter;
-using JwtTestAdapter;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TestCommon;
 
 namespace ComboPatterns.AdapterTests
 {
@@ -19,7 +19,8 @@ namespace ComboPatterns.AdapterTests
                 .Then("Check result", adapter =>
                 {
                     Assert.IsNotNull(adapter, "adapter cannot be null");
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -33,7 +34,8 @@ namespace ComboPatterns.AdapterTests
                 .Then("Check result", adapter =>
                 {
                     adapter.AssertFactory(Factory);
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -60,7 +62,8 @@ namespace ComboPatterns.AdapterTests
                     Assert.AreNotEqual(adapter1, adapter2, "facades match");
                     Assert.AreEqual(1, adapter1.CountCallGetAdapter, "there should have been 1 call GetAdapter");
                     Assert.AreEqual(0, adapter2.CountCallGetAdapter, "there should have been 0 call GetAdapter");
-                });
+                })
+                .Run();
         }
     }
 }

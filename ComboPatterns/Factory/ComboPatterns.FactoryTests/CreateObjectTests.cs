@@ -1,6 +1,6 @@
-using JwtTestAdapter;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using TestCommon;
 
 namespace ComboPatterns.FactoryTests
 {
@@ -18,7 +18,8 @@ namespace ComboPatterns.FactoryTests
                 .Then("Check result", obj =>
                 {
                     Assert.IsNotNull(obj, "object not created");
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -33,7 +34,8 @@ namespace ComboPatterns.FactoryTests
                 {
                     Assert.IsNotNull(ex, "error cannot be null");
                     Assert.AreEqual("factoryFunc", ex.ParamName, "expected another message");
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -50,7 +52,8 @@ namespace ComboPatterns.FactoryTests
                 {
                     Assert.IsNotNull(obj, "object not created");
                     Assert.AreEqual(paramObj, obj.param, "expected another parameter");
-                });
+                })
+                .Run();
         }
     }
 }
