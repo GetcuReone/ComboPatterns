@@ -1,4 +1,4 @@
-﻿namespace JwtTestAdapter
+﻿namespace TestCommon
 {
     /// <summary>
     /// Test categories.

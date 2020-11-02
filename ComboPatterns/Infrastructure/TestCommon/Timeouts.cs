@@ -1,4 +1,8 @@
-﻿namespace JwtTestAdapter
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TestCommon
 {
     public static class Timeouts
     {

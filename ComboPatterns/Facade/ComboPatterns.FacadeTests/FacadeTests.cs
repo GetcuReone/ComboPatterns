@@ -1,7 +1,7 @@
 using ComboPatterns.FacadeTests.Env;
 using GetcuReone.ComboPatterns.Facade;
-using JwtTestAdapter;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TestCommon;
 
 namespace ComboPatterns.FacadeTests
 {
@@ -19,7 +19,8 @@ namespace ComboPatterns.FacadeTests
                 .Then("Check result", facade =>
                 {
                     Assert.IsNotNull(facade, "facade cannot be null");
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -33,7 +34,8 @@ namespace ComboPatterns.FacadeTests
                 .Then("Check result", facade =>
                 {
                     facade.AssertFactory(Factory);
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -60,7 +62,8 @@ namespace ComboPatterns.FacadeTests
                     Assert.AreNotEqual(facade1, facade2, "facades match");
                     Assert.AreEqual(1, facade1.CountCallGetFacade, "there should have been 1 call GetFacade");
                     Assert.AreEqual(0, facade2.CountCallGetFacade, "there should have been 0 call GetFacade");
-                });
+                })
+                .Run();
         }
     }
 }

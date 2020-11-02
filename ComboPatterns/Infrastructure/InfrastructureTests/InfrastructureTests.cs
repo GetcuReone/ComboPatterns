@@ -1,13 +1,13 @@
+using GetcuReone.GwtTestFramework;
+using GetcuReone.GwtTestFramework.Helpers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Reflection;
-using GetcuReone.GwtTestFramework;
-using GetcuReone.GwtTestFramework.Helpers;
-using JwtTestAdapter;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TestCommon;
 
 namespace InfrastructureTests
 {
@@ -89,7 +89,8 @@ namespace InfrastructureTests
 
                     foreach (string file in files)
                         Assert.IsTrue(fileNames.Any(fileFullName => fileFullName == file), $"The archive does not contain a file {file}");
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -138,7 +139,8 @@ namespace InfrastructureTests
                     {
                         Assert.Fail("Methods dont have TimeoutAttribute:\n" + string.Join("\n", invalidMethods.Select(method => $"{method.DeclaringType.FullName}.{method.Name}")));
                     }
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -193,7 +195,8 @@ namespace InfrastructureTests
                     {
                         Assert.Fail($"Invalid types: \n{string.Join("\n", invalidTypes.ConvertAll(type => type.FullName))}");
                     }
-                });
+                })
+                .Run();
         }
 
         [TestMethod]
@@ -256,7 +259,8 @@ namespace InfrastructureTests
                     {
                         Assert.Fail($"Invalid assemblies: \n{string.Join("\n", invalidAssemblies.ConvertAll(type => type.FullName))}");
                     }
-                });
+                })
+                .Run();
         }
     }
 }
