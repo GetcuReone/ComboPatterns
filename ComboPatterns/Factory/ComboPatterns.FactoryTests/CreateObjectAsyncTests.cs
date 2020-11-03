@@ -28,7 +28,7 @@ namespace ComboPatterns.FactoryTests
         [Timeout(Timeouts.MilliSecond.Hundred)]
         public async Task CreateObjectAsyncWithoutFuncTestCase()
         {
-            const string paramName = "factoryFunc";
+            const string paramName = "factoryFuncAsync";
 
             await GivenCreateFactory()
                 .WhenAsync("Create object", async factory =>
