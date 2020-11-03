@@ -20,7 +20,7 @@ namespace GetcuReone.ComboPatterns.Factory
         }
 
         /// <inheritdoc/>
-        /// <exception cref="ArgumentNullException">if <paramref name="factoryFunc"/> is null.</exception>
+        /// <exception cref="ArgumentNullException">if <paramref name="factoryFuncAsync"/> is null.</exception>
         public virtual ValueTask<TObj> CreateObjectAsync<TParameter, TObj>(Func<TParameter, ValueTask<TObj>> factoryFuncAsync, TParameter parameters)
         {
             if (factoryFuncAsync == null)
