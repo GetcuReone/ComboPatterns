@@ -1,27 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>GetcuReone.ComboPatterns.Adapter</RootNamespace>
-    <DocumentationFile>ComboPatterns.Adapter.xml</DocumentationFile>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>GetcuReone.ComboPatterns.Adapter</RootNamespace>
+        <DocumentationFile>ComboPatterns.Adapter.xml</DocumentationFile>
+    </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>$(snkFilePath)</AssemblyOriginatorKeyFile>
-    <DelaySign>false</DelaySign>
-    <AssemblyVersion>$(majorVersion).0.0.0</AssemblyVersion>
-    <FileVersion>$(majorVersion).0.0.0</FileVersion>
-  </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>$(snkFilePath)</AssemblyOriginatorKeyFile>
+        <DelaySign>false</DelaySign>
+        <AssemblyVersion>$(majorVersion).$(minorVersion).0.0</AssemblyVersion>
+        <FileVersion>$(majorVersion).$(minorVersion).0.0</FileVersion>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\ComboPatterns\ComboPatterns.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\ComboPatterns\ComboPatterns.csproj" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Update="ComboPatterns.Adapter.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+    <ItemGroup>
+        <None Update="ComboPatterns.Adapter.xml">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 
 </Project>

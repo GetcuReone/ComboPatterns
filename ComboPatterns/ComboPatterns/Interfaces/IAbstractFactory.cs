@@ -19,13 +19,13 @@ namespace GetcuReone.ComboPatterns.Interfaces
         TObj CreateObject<TParameter, TObj>(Func<TParameter, TObj> factoryFunc, TParameter parameters);
 
         /// <summary>
-        /// Object creation method.
+        /// Asynchronous object creation.
         /// </summary>
         /// <typeparam name="TObj">type of object to create.</typeparam>
         /// <typeparam name="TParameter">type of parameters for creating an object.</typeparam>
-        /// <param name="factoryFunc">function to create objects.</param>
+        /// <param name="factoryFuncAsync">function to create objects.</param>
         /// <param name="parameters">options for creating an object.</param>
         /// <returns>object</returns>
-        ValueTask<TObj> CreateObjectAsync<TParameter, TObj>(Func<TParameter, ValueTask<TObj>> factoryFunc, TParameter parameters);
+        ValueTask<TObj> CreateObjectAsync<TParameter, TObj>(Func<TParameter, ValueTask<TObj>> factoryFuncAsync, TParameter parameters);
     }
 }
