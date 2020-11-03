@@ -21,12 +21,12 @@ namespace GetcuReone.ComboPatterns.Factory
 
         /// <inheritdoc/>
         /// <exception cref="ArgumentNullException">if <paramref name="factoryFunc"/> is null.</exception>
-        public virtual ValueTask<TObj> CreateObjectAsync<TParameter, TObj>(Func<TParameter, ValueTask<TObj>> factoryFunc, TParameter parameters)
+        public virtual ValueTask<TObj> CreateObjectAsync<TParameter, TObj>(Func<TParameter, ValueTask<TObj>> factoryFuncAsync, TParameter parameters)
         {
-            if (factoryFunc == null)
-                throw new ArgumentNullException(nameof(factoryFunc), $"Input function is null.");
+            if (factoryFuncAsync == null)
+                throw new ArgumentNullException(nameof(factoryFuncAsync), $"Input function is null.");
 
-            return factoryFunc(parameters);
+            return factoryFuncAsync(parameters);
         }
     }
 }
