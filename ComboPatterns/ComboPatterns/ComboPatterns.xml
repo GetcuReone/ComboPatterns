@@ -19,16 +19,6 @@
             <param name="parameters">options for creating an object.</param>
             <returns>object</returns>
         </member>
-        <member name="M:GetcuReone.ComboPatterns.Interfaces.IAbstractFactory.CreateObjectAsync``2(System.Func{``0,System.Threading.Tasks.ValueTask{``1}},``0)">
-            <summary>
-            Asynchronous object creation.
-            </summary>
-            <typeparam name="TObj">type of object to create.</typeparam>
-            <typeparam name="TParameter">type of parameters for creating an object.</typeparam>
-            <param name="factoryFuncAsync">function to create objects.</param>
-            <param name="parameters">options for creating an object.</param>
-            <returns>object</returns>
-        </member>
         <member name="T:GetcuReone.ComboPatterns.Interfaces.IAdapter">
             <summary>
             Adapter creation interface

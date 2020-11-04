@@ -13,9 +13,5 @@
             <inheritdoc/>
             <exception cref="T:System.ArgumentNullException">if <paramref name="factoryFunc"/> is null.</exception>
         </member>
-        <member name="M:GetcuReone.ComboPatterns.Factory.FactoryBase.CreateObjectAsync``2(System.Func{``0,System.Threading.Tasks.ValueTask{``1}},``0)">
-            <inheritdoc/>
-            <exception cref="T:System.ArgumentNullException">if <paramref name="factoryFunc"/> is null.</exception>
-        </member>
     </members>
 </doc>
