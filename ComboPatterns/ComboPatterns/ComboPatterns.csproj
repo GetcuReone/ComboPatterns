@@ -16,10 +16,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="System.Threading.Tasks.Extensions" Version="[4.5.4,)" />
-    </ItemGroup>
-
-    <ItemGroup>
         <None Update="ComboPatterns.xml">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
