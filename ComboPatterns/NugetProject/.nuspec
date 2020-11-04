@@ -17,6 +17,11 @@
     <copyright>$Copyright$</copyright>
     <releaseNotes>$PackageReleaseNotes$</releaseNotes>
     <language>$NeutralLanguage$</language>
+
+    <dependencies>
+      <group targetFramework=".$TargetFramework$">
+      </group>
+    </dependencies>
   </metadata>
 
   <files>
