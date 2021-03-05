@@ -13,7 +13,9 @@
         <RepositoryUrl>https://github.com/GetcuReone/ComboPatterns.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>abstractfactory factory facade adapter proxy getcureone combopatterns</PackageTags>
-        <PackageReleaseNotes>Remove a method for asynchronous creation of objects for a factory.</PackageReleaseNotes>
+        <PackageReleaseNotes>Changes:
+         - remove a method for asynchronous creation of objects for a factory
+         - fix assembly version</PackageReleaseNotes>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <Copyright>Copyright © 2019 $(Authors)</Copyright>
         <NeutralLanguage>en-US</NeutralLanguage>
@@ -59,8 +61,8 @@
         <SignAssembly>true</SignAssembly>
         <AssemblyOriginatorKeyFile>$(snkFilePath)</AssemblyOriginatorKeyFile>
         <DelaySign>false</DelaySign>
-        <AssemblyVersion>$(majorVersion).$(minorVersion).0.0</AssemblyVersion>
-        <FileVersion>$(majorVersion).$(minorVersion).0.0</FileVersion>
+        <AssemblyVersion>$(majorVersion).0.0.0</AssemblyVersion>
+        <FileVersion>$(majorVersion).0.0.0</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
