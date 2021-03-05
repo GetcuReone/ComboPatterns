@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -9,8 +9,8 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(snkFilePath)</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
-    <AssemblyVersion>$(majorVersion).$(minorVersion).0.0</AssemblyVersion>
-    <FileVersion>$(majorVersion).$(minorVersion).0.0</FileVersion>
+    <AssemblyVersion>$(majorVersion).0.0.0</AssemblyVersion>
+    <FileVersion>$(majorVersion).0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
