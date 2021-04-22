@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+    <Import Project="..\..\.buildTools\GetcuReone.Common.props" />
+
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
-        <Authors>Itua Juel-Gaben</Authors>
         <PackageId>ComboPatterns</PackageId>
         <Product>ComboPatterns</Product>
         <Description>My implementation of a combination of patterns</Description>
@@ -14,20 +15,11 @@
         <RepositoryType>git</RepositoryType>
         <PackageTags>abstractfactory factory facade adapter proxy getcureone combopatterns</PackageTags>
         <PackageReleaseNotes>Changes:
-         - remove a method for asynchronous creation of objects for a factory
-         - fix assembly version</PackageReleaseNotes>
+         - change assembly name</PackageReleaseNotes>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
         <Copyright>Copyright © 2019 $(Authors)</Copyright>
         <NeutralLanguage>en-US</NeutralLanguage>
         <PackageProjectUrl>https://github.com/GetcuReone/ComboPatterns/wiki</PackageProjectUrl>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
-        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(PackageVersion)'==''">
-        <PackageVersion>1.0.0</PackageVersion>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -55,14 +47,6 @@
         <!--Transfer another information-->
         <NuspecProperties>$(NuspecProperties);Configuration=$(Configuration)</NuspecProperties>
         <NuspecProperties>$(NuspecProperties);TargetFramework=$(TargetFramework)</NuspecProperties>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-        <SignAssembly>true</SignAssembly>
-        <AssemblyOriginatorKeyFile>$(snkFilePath)</AssemblyOriginatorKeyFile>
-        <DelaySign>false</DelaySign>
-        <AssemblyVersion>$(majorVersion).0.0.0</AssemblyVersion>
-        <FileVersion>$(majorVersion).0.0.0</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>

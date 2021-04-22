@@ -25,8 +25,8 @@
   </metadata>
 
   <files>
-    <file src="bin\$Configuration$\$TargetFramework$\ComboPatterns**dll" target="lib\$TargetFramework$" />
-    <file src="bin\$Configuration$\$TargetFramework$\ComboPatterns**xml" target="lib\$TargetFramework$" />
+    <file src="bin\$Configuration$\$TargetFramework$\GetcuReone.ComboPatterns**dll" target="lib\$TargetFramework$" />
+    <file src="bin\$Configuration$\$TargetFramework$\GetcuReone.ComboPatterns**xml" target="lib\$TargetFramework$" />
     <file src="bin\$Configuration$\$TargetFramework$\$PackageLicenseFile$" target="" />
     <file src="bin\$Configuration$\$TargetFramework$\README.md" target="" />
   </files>
