@@ -70,7 +70,7 @@ namespace InfrastructureTests
                 })
                 .Then("Check archive .nupkg", fileNames =>
                 {
-                    string libPattern = $"lib/{_targetFramework}/" + "{0}";
+                    string libPattern = $"lib/{_targetFramework}/GetcuReone." + "{0}";
                     var files = new string[]
                     {
                         string.Format(libPattern, "ComboPatterns.dll"),
@@ -211,7 +211,7 @@ namespace InfrastructureTests
             string majorVersion = Environment.GetEnvironmentVariable("majorVersion");
             string excpectedAssemblyVersion = majorVersion != null
                 ? $"{majorVersion}.0.0.0"
-                : "1.0.0.0";
+                : "4.0.0.0";
 
             string partNameAssemblies = _projectName;
 
